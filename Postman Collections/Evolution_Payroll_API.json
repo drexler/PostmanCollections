@@ -278,7 +278,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"BranchId\": 30,\r\n  \"Number\": \"DPT Andrew\",\r\n  \"Name\": \"DPT Andrew\",\r\n  \"HomeStatesNumber\": 3,\r\n  \"HomeStateType\": \"D\"\r\n}\r\n\r\n"
+              "raw": " {\n    \"BranchId\": 10,\n    \"Number\": \"Tickets\",\n    \"Name\": \"Ticket Saless\",\n    \"HomeStatesNumber\": 2,\n    \"OverridePayRate\": null,\n    \"OverrideEeRateNumber\": null,\n    \"PayrollBankAccountId\": null,\n    \"TaxBankAccountId\": null,\n    \"BillingBankAccountId\": null,\n    \"DirectDepositBankAccountId\": null,\n    \"HomeStateType\": \"D\",\n    \"DisplayOption\": \"Show\",\n    \"Id\": 0\n  }"
             },
             "description": "Create a new branch"
           },
