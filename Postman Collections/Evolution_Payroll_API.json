@@ -1,0 +1,772 @@
+{
+  "variables": [],
+  "info": {
+    "name": "Evolution Payroll API",
+    "_postman_id": "682eb551-f644-3d35-1791-60c86bb23f70",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "c329d017-9415-7dfc-408c-c2d84fae586c",
+      "name": "Company",
+      "description": "Company endpoints",
+      "item": [
+        {
+          "_postman_id": "b663e139-154c-74fa-25ba-6e2307393daf",
+          "name": "Companies",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get all companies "
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "4b3b6688-880c-8161-4622-65ddf006fbca",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "20bbffff-3035-398c-84af-5f89d3187d37",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ClientId\": 124,\r\n  \"Number\": \"BMRC78399\",\r\n  \"FederalEmployerIdentifierNumber\": \"158884629\",\r\n  \"Name\": \"BareMinimumRequiredForCompany\",\r\n  \"Address\": {\r\n    \"ZipCode\": \"05401\",\r\n    \"State\": \"VT\",\r\n    \"City\": \"Burlington\",\r\n    \"Street1\": \"2 Church Street\"\r\n\r\n  },\r\n  \"LegalAddress\": {\r\n    \"ZipCode\": \"05452\",\r\n    \"State\": \"VT\",\r\n    \"City\": \"Burlington\",\r\n    \"Street1\": \"2 Church Street\"\r\n\r\n  },\r\n \r\n  \"TaxBankAccountId\": 22,\r\n  \"DirectDepositBankAccountId\": 22,\r\n  \"BillingBankAccountId\": 22,\r\n  \"ClientBillingNumber\": 2,\r\n  \"MiscCheckForm\": \"I\",\r\n  \"PayrollClBankAccountNbr\": 22\r\n  \r\n}"
+            },
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c713440c-5e05-470e-b77d-c998cc88c0b1",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ClientId\": 124,\r\n  \"Number\": \"WEB650 - 1\",\r\n  \"Email\": null,\r\n  \"FederalEmployerIdentifierNumber\": \"158884629\",\r\n  \"LegalName\": null,\r\n  \"Name\": \"The Styling Salon (DBDT)\",\r\n  \"Dba\": null,\r\n  \"EmployeePayFreqDefaultId\": \"W\",\r\n  \"Address\": {\r\n    \"ZipCode\": \"05401\",\r\n    \"State\": \"VT\",\r\n    \"City\": \"South Burlington\",\r\n    \"Street2\": null,\r\n    \"Street1\": \"2 Church Street\",\r\n    \"County\": null\r\n  },\r\n  \"LegalAddress\": {\r\n    \"ZipCode\": \"05401\",\r\n    \"State\": \"VT\",\r\n    \"City\": \"Essex Junction\",\r\n    \"Street2\": null,\r\n    \"Street1\": \"2 Church Street\",\r\n    \"County\": null\r\n  },\r\n  \"PayrollBankAccountId\": 22,\r\n  \"TaxBankAccountId\": 22,\r\n  \"DirectDepositBankAccountId\": 22,\r\n  \"DbdtLevel\": 3,\r\n  \"BillingBankAccountId\": 22,\r\n  \"StartDate\": \"2013-05-01T00:00:00\",\r\n  \"BusinessStartDate\": \"2013-05-17T00:00:00\",\r\n  \"TerminationCode\": \"Active\",\r\n  \"ClientBillingNumber\": 2,\r\n  \"DebitNumberDaysPriorPr\": 2,\r\n  \"InitialEffectiveDate\": \"2013-01-01T00:00:00\",\r\n  \"MiscCheckForm\": \"I\",\r\n  \"PayrollClBankAccountNbr\": 22,\r\n  \"ProcessPriority\": 1,\r\n  \"CorporationCode\": \"LLC\",\r\n  \"CoAchProcessLimitations\": \"NA\",\r\n  \"CoCheckPrimarySort\": \"Alpha\",\r\n  \"EmployerType\": \"NoneApply\",\r\n  \"EnableTimeOff\": \"No\",\r\n  \"EnableBenefits\": \"No\",\r\n  \"EnableEss\": \"No\",\r\n  \"EnableHr\": \"No\",\r\n  \"LastTaxReturn\": false,\r\n  \"CoExceptionPaymentType\": \"NA\",\r\n  \"WcImpound\": \"None\",\r\n  \"BillingImpound\": \"Ach\",\r\n  \"DdImpound\": \"Ach\",\r\n  \"TaxImpound\": \"Ach\",\r\n  \"TrustImpound\": \"Ach\",\r\n  \"CoPayrollProcessLimitations\": \"NA\",\r\n  \"QtrLockForTaxPmts\": true,\r\n  \"PayrollRequiresMgrApproval\": false,\r\n  \"AcaAvgHoursWorkedPeriod\": \"Weekly\",\r\n  \"AcaUseAvgHoursWorked\": false,\r\n  \"AcaDefaultStatus\": \"DoesNotApply\",\r\n  \"AcaEducationOrg\": false,\r\n  \"EssOrEp\": \"Ess\",\r\n  \"EnableDd\": \"No\",\r\n  \"PreNote\": false,\r\n  \"PrintCpa\": false,\r\n  \"Remote\": false,\r\n  \"AnnualFormType\": \"W2\",\r\n  \"BusinessType\": \"NA\",\r\n  \"Restaurant\": false,\r\n  \"SuccessorCompany\": false,\r\n  \"MedicalPlan\": false,\r\n  \"PayFrenquencies\": \"Weekly\",\r\n  \"BillingLevel\": \"Company\",\r\n  \"BankAccountLevel\": \"Company\",\r\n  \"TaxService\": \"Full\",\r\n  \"UseDbaOnTaxReturn\": \"Primary\",\r\n  \"EftpsEnrollmentStatus\": \"Active\",\r\n  \"TrustService\": \"All\",\r\n  \"Obc\": false,\r\n  \"FederalTaxDepositFrequency\": \"SemiWeekly\",\r\n  \"FederalTaxTransferMethod\": \"None\",\r\n  \"Fed943TaxDepositFrequency\": \"SemiWeekly\",\r\n  \"Fed945TaxDepositFrequency\": \"SemiWeekly\",\r\n  \"FederalTaxPaymentMethod\": \"Check\",\r\n  \"ExternalTaxExport\": false,\r\n  \"NonProfit\": false,\r\n  \"FederalTaxExemptStatus\": false,\r\n  \"FedTaxExemptEeOasdi\": false,\r\n  \"FedTaxExemptErOasdi\": false,\r\n  \"FedTaxExemptEeMedicare\": false,\r\n  \"FedTaxExemptErMedicare\": false,\r\n  \"FuiTaxDepositFrequency\": \"Quarterly\",\r\n  \"FuiTaxExempt\": false,\r\n  \"PrimarySortField\": \"Alpha\",\r\n  \"SecondarySortField\": \"DepartmentName\",\r\n  \"ThirdPartyInGrossPrReport\": \"None\",\r\n  \"DeductionsToZero\": false,\r\n  \"AutoPayCompany\": \"Remote\",\r\n  \"BenefitsEligibleDefault\": false,\r\n  \"AnalyticsLicense\": false,\r\n  \"EnableAnalytics\": false,\r\n  \"EePrintVoucherDefault\": \"True\",\r\n  \"ShowManualChecksInEss\": false,\r\n  \"ReprintToBalance\": \"Current\",\r\n  \"AutoReductionDefaultEes\": \"Both\",\r\n  \"ShowTimeClockPunch\": false,\r\n  \"CalculateStatesFirst\": \"No\",\r\n  \"ExcludeRCB0RN\": \"None\",\r\n  \"BillingCheckCpa\": false,\r\n  \"ShowShortfallCheck\": false,\r\n  \"SummarizeSui\": false,\r\n  \"BreakChecksByDbdt\": false,\r\n  \"ProrateFlatFeeForDbdt\": true,\r\n  \"HoldReturnQueue\": false,\r\n  \"NameOnInvoice\": \"Yes\",\r\n  \"CheckTimeOffAvail\": \"No\",\r\n  \"ReverseCheckPrinting\": false,\r\n  \"ImpoundWorkersComp\": false,\r\n  \"ShowDirDepNbrOnChecks\": false,\r\n  \"ShowRatesOnChecks\": true,\r\n  \"ChargeCobraAdminFee\": true,\r\n  \"WeekendAction\": true,\r\n  \"CalculateLocalsFirst\": true,\r\n  \"AutoEnlist\": \"UseEnlistGroups\",\r\n  \"FinalTaxReturn\": false,\r\n  \"CollateChecks\": true,\r\n  \"SetupCompleted\": false,\r\n  \"ExternalNetworkAdministrator\": false,\r\n  \"NetworkAdminPhoneType\": \"None\",\r\n  \"ModemConnectionType\": \"RegularDirect\",\r\n  \"ModemSpeed\": \"NA\",\r\n  \"Network\": \"None\",\r\n  \"HardwareOS\": \"NA\",\r\n  \"RemoteOfClient\": \"AllChecks\",\r\n  \"CreditHold\": \"None\",\r\n  \"PrintManualChecksStubs\": false,\r\n  \"CheckForm\": false,\r\n  \"TimeOffAccrual\": \"False\",\r\n  \"ShowSSNumberOnCheck\": \"Last4\",\r\n  \"ShowEinNumberOnCheck\": false,\r\n  \"ShowYtdOnCheck\": true,\r\n  \"ShowShiftsOnCheck\": false,\r\n  \"MakeUpTaxDeductShortfalls\": false,\r\n  \"CheckType\": \"AlwaysPrint\",\r\n  \"ApplyMiscLimitTo1099\": true,\r\n  \"WithHoldingDefaults\": \"Single\",\r\n  \"DistributeDeductionsDefault\": \"DistributeBoth\",\r\n  \"AutoLaborDistLevel\": \"ShowLocationAndJob\",\r\n  \"AutoLaborDistShowDeducts\": false,\r\n  \"SmokerDefault\": false,\r\n  \"CoCheckSecondarySort\": \"Department\",\r\n  \"PayFrequencySalaryDefault\": \"Weekly\",\r\n  \"ContactName\": \"Cheri\",\r\n  \"PhoneNumber\": \"802-825-6516\",\r\n  \"Email_Address\": null,\r\n  \"PhoneNumberExtension\": null,\r\n  \"SequenceNumber\": null,\r\n  \"PhoneType\": 0,\r\n  \"Description\": null,\r\n  \"Id\": 8\r\n}"
+            },
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "505f85bc-3e8e-ff97-d2e1-0bc8531c6dca",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 204\"] = responseCode.code === 204;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/16",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Get a specific company"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "049580a6-514f-f83a-923c-e3ab228489c4",
+      "name": "Branch",
+      "description": "Branch endpoints",
+      "item": [
+        {
+          "_postman_id": "e5d6b73c-4cdf-9dcd-7760-62048df6cdf2",
+          "name": "Branch",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/branches",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"DivisionId\": 68,\r\n  \"Number\": \"BR-TestAndrew\",\r\n  \"Name\": \"BR-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new branch"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "811e29a9-36ef-0e7a-854a-f7b6fedcf120",
+          "name": "Branch",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c1c6bbe0-5f97-82c1-3a63-6877ee1f0a8b",
+          "name": "Branches",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "de928d69-46ff-aa0a-3db1-e1ed8cfe67f6",
+      "name": "Department",
+      "description": "Department endpoints",
+      "item": [
+        {
+          "_postman_id": "5c8d8372-90b4-2db9-82ce-99815c5a4ab5",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"BranchId\": 30,\r\n  \"Number\": \"DPT Andrew\",\r\n  \"Name\": \"DPT Andrew\",\r\n  \"HomeStatesNumber\": 3,\r\n  \"HomeStateType\": \"D\"\r\n}\r\n\r\n"
+            },
+            "description": "Create a new branch"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fcd0bfa2-24ef-a710-4701-ab21c5b36715",
+          "name": "Departments",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ca9d4485-8e42-b94c-90e7-29a04bdbeb15",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a9f8c1db-1fc1-6929-8d01-6fd6487bd609",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments/{{deptId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"BranchId\": 10,\n  \"Number\": \"             Ticket\",\n  \"Name\": \"Ticket Sales\",\n  \"HomeStatesNumber\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"HomeStateType\": \"D\",\n  \"DisplayOption\": \"Show\",\n  \"Id\": 15\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "cf9e8981-4a34-58f4-0f59-b273e13ef49e",
+          "name": "Department ",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments/{{deptId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a department by id"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "16ca634d-da09-d90f-bfd2-e2b5f1fd2190",
+      "name": "Client",
+      "description": "Client endpoint",
+      "item": [
+        {
+          "_postman_id": "095ef878-aca7-c2d8-0c62-8d94df922bf2",
+          "name": "Clients",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9f1bad17-86c8-f00d-8688-fe17c35de431",
+          "name": "Clients (Invalid auth token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 401\"] = responseCode.code === 401;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer invalidBearerToken26849293",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Passing an invalid authorization bearer token"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "127c031d-3293-a12c-ea9a-2942e0f49510",
+          "name": "Clients (Invalid bureau)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/sandbo/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Passing in an invalid service bureau name: sandbo"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6ddc47f0-849c-e647-0226-96b25f567956",
+      "name": "Division",
+      "description": "Division endpoints",
+      "item": [
+        {
+          "_postman_id": "4a359dc1-9155-86cf-d2cb-1d3609a6ad05",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2f301d40-0716-d921-79f1-c481f56ed7ad",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5a9d6d89-c221-3801-38a1-f8e5c466b2b9",
+          "name": "Divisions",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "615e8d6b-a4fd-efa7-07f5-7051311dfa28",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/1",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "132feaaf-d196-caab-deec-5565cb056216",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"Number\": \"                Wgen\",\n  \"Name\": \"West Genesse Divsion\",\n  \"DisplayOption\": \"Show\",\n  \"HomeStatesNumber\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"Id\": 7\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "b8074d04-d035-7983-2ebe-cb1e42cc41e0",
+      "name": "Employee",
+      "description": "Collection of endpoints related to an Employee",
+      "item": [
+        {
+          "_postman_id": "25f54d05-a19a-d083-0b98-2bce0df89dfb",
+          "name": "Employees",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c6e17ee2-78e7-1a24-7552-8915d6c6f239",
+          "name": "Employee",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "84ba1c30-69d1-ddea-30de-0d9eb71117ac",
+          "name": "Employees",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Person\": {\n    \"Name\": {\n      \"LastName\": \"Von Powderpuff\",\n      \"FirstName\": \"Helgas\"\n    },\n    \"Address\": {\n      \"ZipCode\": \"05401\",\n      \"State\": \"VT\",\n      \"City\": \"Burlington\",\n      \"Street1\": \"73 Main Street #201\"\n    },\n    \"SocialSecurityNumber\": \"684-34-1641\",\n    \"ResidentialStateId\": 1\n  },\n  \"CompanyId\": 8\n}"
+            },
+            "description": "Creates an employee"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "664db7d8-f125-b562-70f7-a15ff1a7cd7a",
+      "name": "Person",
+      "description": "Folder containing person endpoint",
+      "item": [
+        {
+          "_postman_id": "2dfdcf9d-2fad-538f-0f00-002f1ecdc9d6",
+          "name": "Persons",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/persons",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "17cb9eb5-6974-704a-acab-50caf4749eb8",
+          "name": "Person",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/persons/{{personId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
+      "name": "API Access Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var tokenData = JSON.parse(responseBody);",
+              "postman.setEnvironmentVariable(\"Authorization\", \"Bearer \" + tokenData[\"access_token\"]);",
+              "",
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "{{EVO_API_ROOT}}/identity/{{EVO_API_VERSION}}/token/bureau/{{bureau}}",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic  TWFwbGU6",
+            "description": ""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text",
+              "enabled": true
+            },
+            {
+              "key": "username",
+              "value": "sally2",
+              "type": "text",
+              "enabled": true
+            },
+            {
+              "key": "password",
+              "value": "test2",
+              "type": "text",
+              "enabled": true
+            }
+          ]
+        },
+        "description": "Access token for Evolution API Gateway"
+      },
+      "response": []
+    }
+  ]
+}
