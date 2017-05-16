@@ -725,6 +725,149 @@
       ]
     },
     {
+      "_postman_id": "294ef212-f6c2-61e2-bf30-cc331439d053",
+      "name": "Department copy",
+      "description": "Department endpoints",
+      "item": [
+        {
+          "_postman_id": "8be58fb5-0d8e-3e12-e177-0b5d6319a49c",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\n    \"BranchId\": 10,\n    \"Number\": \"Tickets\",\n    \"Name\": \"Ticket Saless\",\n    \"HomeStatesNumber\": 2,\n    \"OverridePayRate\": null,\n    \"OverrideEeRateNumber\": null,\n    \"PayrollBankAccountId\": null,\n    \"TaxBankAccountId\": null,\n    \"BillingBankAccountId\": null,\n    \"DirectDepositBankAccountId\": null,\n    \"HomeStateType\": \"D\",\n    \"DisplayOption\": \"Show\",\n    \"Id\": 0\n  }"
+            },
+            "description": "Create a new branch"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7b66ec0f-9697-3d2f-7752-39b12fe13638",
+          "name": "Departments",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ccd09be6-1df8-2267-7fbb-8f9975b90320",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2d690311-09f9-21ce-b795-70f9cb07aab8",
+          "name": "Department",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments/{{deptId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"BranchId\": 10,\n  \"Number\": \"             Ticket\",\n  \"Name\": \"Ticket Sales\",\n  \"HomeStatesNumber\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"HomeStateType\": \"D\",\n  \"DisplayOption\": \"Show\",\n  \"Id\": 15\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ce3aa45d-9e1b-cbff-1acf-c4868bd4d8c1",
+          "name": "Department ",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments/{{deptId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a department by id"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c948880e-700a-d414-2890-7ddc3e4d8d4e",
+          "name": "Departments( Short Version)",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/departments",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
