@@ -1,0 +1,597 @@
+{
+  "variables": [],
+  "info": {
+    "name": "NightShade",
+    "_postman_id": "4725b7f5-43f9-b92c-f6fd-8321140f5805",
+    "description": "Facade APIs for Evolution",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "7756b2cc-6ecc-9304-0f1a-4cce9d3a0df4",
+      "name": "Client",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "ce0f846a-c8b9-fc79-aba1-294daf4b06a6",
+          "name": "Clients",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of clients"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1746aa6d-f5ba-c18d-e4de-1650ae70dcc8",
+          "name": "Clients (Invalid auth token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 401\"] = responseCode.code === 401;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer jdjdijdld",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of clients"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b1e5db9b-7798-903e-fc82-c20c08af8ea7",
+          "name": "Clients (Invalid bureau)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/sandbo/clients",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of clients"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "75fd8206-09be-a9e7-3304-f6ba4b2a3844",
+      "name": "Company",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "9e417e2c-65c3-d21d-7e64-2af35a48b130",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"clientId\": 124,\n  \"invoiceBillingId\": 2,\n  \"shortName\": \"Ido's Company\",\n  \"email\": \"aq@gmail.com\",\n  \"fein\": \"158884629\",\n  \"legalName\": \"\",\n  \"name\": \"Ido's Company\",\n  \"doingBusinessAs\": \"\",\n  \"address\": {\n    \"addressLine1\": \"2 Church Street\",\n    \"addressLine2\": \"\",\n    \"city\": \"Burlington\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05401\",\n    \"county\": \"\"\n  },\n  \"legalAddress\": {\n    \"addressLine1\": \"2 oaky bush\",\n    \"addressLine2\": \"\",\n    \"city\": \"essex\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05452\",\n    \"county\": \"\"\n  },\n  \"dbdtLevel\": \"Division\",\n  \"initialPayrollOrCheckDate\": \"2013-05-17T00:00:00\",\n  \"initialEffectiveDate\": \"2013-01-01T00:00:00\",\n  \"businessType\": null,\n  \"employerType\": null,\n  \"businessStructure\": null,\n  \"isEvolutionCompanySuccessor\": false,\n  \"isRestaurant\": false,\n  \"isNonProfit\": false,\n  \"processPriority\": 1,\n  \"status\": \"Active\",\n  \"statusEffectiveDate\": \"2013-05-01T00:00:00\",\n  \"numberOfDaysForDebit\": 2,\n  \"processingThresholdActions\": {\n    \"payroll\": \"NA\",\n    \"ach\": \"NA\"\n  },\n  \"employeePortal\": {\n    \"isEnabled\": false,\n    \"selfServiceSecurityOptions\": {\n      \"employeeInfo\": \"No\",\n      \"timeOff\": \"No\",\n      \"benefits\": \"No\",\n      \"directDeposit\": \"No\"\n    }\n  },\n  \"hrConfiguration\": \"No\",\n  \"isLastTaxReturnSubmitted\": false,\n  \"impoundModes\": {\n    \"trust\": \"Ach\",\n    \"tax\": \"Ach\",\n    \"taxException\": \"NA\",\n    \"directDeposit\": \"Ach\",\n    \"billing\": \"Ach\",\n    \"workersCompensation\": \"None\"\n  },\n  \"isTaxPaymentQuarterly\": true,\n  \"isManagerApprovalRequiredToProcessPayroll\": false,\n  \"acaCompliance\": {\n    \"averageHoursWorkedPeriod\": \"Weekly\",\n    \"isAverageHoursWorkedBasedOnProcessedPayrolls\": false,\n    \"defaultStatus\": \"DoesNotApply\",\n    \"isEducationalOrganization\": false\n  },\n  \"isPreNotesUsedInTransactions\": false,\n  \"cpaPrintOptions\": {\n    \"isOnReports\": false,\n    \"isOnInvoices\": false\n  },\n  \"annualTaxReturnFormType\": \"W2\",\n  \"isMedicalPlanProvided\": false,\n  \"payFrequencies\": \"Weekly\",\n  \"billingLevel\": \"Company\",\n  \"bankAccountLevel\": \"Company\",\n  \"bankAccounts\": [\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"payroll\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"tax\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"directDeposit\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"billing\"\n    }\n  ],\n  \"taxService\": \"Full\",\n  \"eftpsEnrollmentStatus\": \"Active\",\n  \"trustService\": \"All\",\n  \"isOfficialBankCheckUsed\": false,\n  \"federalTaxReporting\": {\n    \"taxDepositFrequency\": {\n      \"federal\": \"SemiWeekly\",\n      \"federal943\": \"SemiWeekly\",\n      \"federal945\": \"SemiWeekly\",\n      \"federalUnemploymentInsuranceTax\": \"Quarterly\"\n    },\n    \"exemptions\": {\n      \"isFederalTaxExempt\": false,\n      \"isEmployeeOasdiExempt\": false,\n      \"isEmployerOasdiExempt\": false,\n      \"isEmployeeMedicareExempt\": false,\n      \"isEmployerMedicareExempt\": false,\n      \"isFederalUnemploymentInsuranceExempt\": false\n    },\n    \"taxTransferLevel\": \"None\",\n    \"paymentMethod\": \"Check\"\n  },\n  \"defaultSortingAndGrouping\": {\n    \"employees\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"DepartmentName\"\n    },\n    \"checks\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"Department\"\n    }\n  },\n  \"isDeductionsZeroed\": false,\n  \"autoPayTrigger\": \"Remote\",\n  \"analytics\": {\n    \"isLicensed\": false,\n    \"isEnabled\": false\n  },\n  \"checkOptions\": {\n    \"isDirectDepositNumberShown\": false,\n    \"isPayRateShown\": true,\n    \"isSsnShown\": \"Last4\",\n    \"isEinShown\": false,\n    \"isYearToDateEarningsShown\": true,\n    \"isShiftsShown\": false,\n    \"isManualChecksShownInEmployeePortal\": false,\n    \"isShortfallsShown\": false,\n    \"isTimeClockPunchShown\": false,\n    \"isCheckSplitByDbdt\": false,\n    \"reprintTimeOffBalance\": \"Current\",\n    \"isDoubleSidedPrinted\": false,\n    \"isStateUnemploymentInsuranceSummaryShown\": false,\n    \"signaturePrintedOn\": \"AllChecks\",\n    \"printTargetMode\": \"AlwaysPrint\",\n    \"isManualCheckPrintedAsStubs\": false,\n    \"autoLaborDistributionLevel\": \"ShowLocationAndJob\",\n    \"printFormType\": \"I\"\n  },\n  \"taxOptions\": {\n    \"stateCalculationPrecedence\": \"No\",\n    \"isDeductionShortfallsMadeUp\": false,\n    \"isLocalTaxesComputedFirst\": true,\n    \"isReturnQueueOnHold\": false,\n    \"isExternalTaxAgencyUsed\": false,\n    \"nameToUseOnReturn\": \"Primary\",\n    \"autoEnlistReturns\": \"UseEnlistGroups\"\n  },\n  \"excludeReportsOrChecks\": \"None\",\n  \"isBillingCheckToCpa\": false,\n  \"isDbdtFlatFeeProrated\": true,\n  \"checkTimeOffAvailability\": \"Yes\",\n  \"miscellaneousDefaults\": {\n    \"payFrequency\": {\n      \"hourlyEmployees\": \"Weekly\",\n      \"salariedEmployees\": \"Weekly\"\n    },\n    \"withholding\": \"Single\",\n    \"isLimitTo1099Applied\": true,\n    \"distributions\": \"DistributeBoth\",\n    \"isBenefitsEligible\": false,\n    \"isEmployeeVoucherPrinted\": true,\n    \"employeeAutoReduction\": \"Both\"\n  },\n  \"isCobraAdminFeeCharged\": false,\n  \"creditHold\": \"None\",\n  \"isTimeOffAccrualWithEvolution\": false,\n  \"isSmokingFactoredInBenefitRates\": false,\n  \"contact\": {\n    \"name\": \"Cheri\",\n    \"designation\": null,\n    \"email\": \"rest@test.com\",\n    \"phones\": [\n      {\n        \"number\": \"802-825-6516\",\n        \"description\": null\n      }\n    ]\n  }\n}"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "32e66dc1-5274-3fb6-ed0a-8b884140c515",
+          "name": "Company (Minimum)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"clientId\": 124,\r\n  \"invoiceBillingId\": 2,\r\n  \"shortName\": \"BMRC765\",\r\n  \"fein\": \"158884629\",\r\n  \"name\": \"BareMinimumRequiredForCompany\",\r\n  \"address\": {\r\n    \"addressLine1\": \"2 Church Street\",\r\n    \"city\": \"Burlington\",\r\n    \"state\": \"VT\",\r\n    \"postalCode\": \"05401\"\r\n  },\r\n  \"legalAddress\": {\r\n    \"addressLine1\": \"2 Church Street\",\r\n    \"city\": \"Burlington\",\r\n    \"state\": \"VT\",\r\n    \"postalCode\": \"05452\"\r\n\r\n  },\r\n  \r\n  \"bankAccounts\": [\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"payroll\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"tax\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"directDeposit\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"billing\"\r\n    }\r\n  ],\r\n  \"checkOptions\": {\r\n    \"printFormType\": \"I\"\r\n  }\r\n\r\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "00db3ed5-2728-e5ba-a472-81f4287b9506",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 8,\n  \"clientId\": 124,\n  \"invoiceBillingId\": 2,\n  \"shortName\": \"WEB650 - 1\",\n  \"email\": \"aq@gmail.com\",\n  \"fein\": \"158884629\",\n  \"legalName\": \"\",\n  \"name\": \"The Styling Salon (DBDT)\",\n  \"doingBusinessAs\": \"\",\n  \"address\": {\n    \"addressLine1\": \"2 Church Street\",\n    \"addressLine2\": \"\",\n    \"city\": \"Burlington\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05401\",\n    \"county\": \"\"\n  },\n  \"legalAddress\": {\n    \"addressLine1\": \"2 oaky bush\",\n    \"addressLine2\": \"\",\n    \"city\": \"essex\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05452\",\n    \"county\": \"\"\n  },\n  \"dbdtLevel\": \"Division\",\n  \"initialPayrollOrCheckDate\": \"2013-05-17T00:00:00\",\n  \"initialEffectiveDate\": \"2013-01-01T00:00:00\",\n  \"businessType\": \"NA\",\n  \"employerType\": \"NoneApply\",\n  \"businessStructure\": \"LLC\",\n  \"isEvolutionCompanySuccessor\": false,\n  \"isRestaurant\": false,\n  \"isNonProfit\": false,\n  \"processPriority\": 1,\n  \"status\": \"Active\",\n  \"statusEffectiveDate\": \"2013-05-01T00:00:00\",\n  \"numberOfDaysForDebit\": 2,\n  \"processingThresholdActions\": {\n    \"payroll\": \"NA\",\n    \"ach\": \"NA\"\n  },\n  \"employeePortal\": {\n    \"isEnabled\": false,\n    \"selfServiceSecurityOptions\": {\n      \"employeeInfo\": \"No\",\n      \"timeOff\": \"No\",\n      \"benefits\": \"No\",\n      \"directDeposit\": \"No\"\n    }\n  },\n  \"hrConfiguration\": \"No\",\n  \"isLastTaxReturnSubmitted\": false,\n  \"impoundModes\": {\n    \"trust\": \"Ach\",\n    \"tax\": \"Ach\",\n    \"taxException\": \"NA\",\n    \"directDeposit\": \"Ach\",\n    \"billing\": \"Ach\",\n    \"workersCompensation\": \"None\"\n  },\n  \"isTaxPaymentQuarterly\": true,\n  \"isManagerApprovalRequiredToProcessPayroll\": false,\n  \"acaCompliance\": {\n    \"averageHoursWorkedPeriod\": \"Weekly\",\n    \"isAverageHoursWorkedBasedOnProcessedPayrolls\": false,\n    \"defaultStatus\": \"DoesNotApply\",\n    \"isEducationalOrganization\": false\n  },\n  \"isPreNotesUsedInTransactions\": false,\n  \"cpaPrintOptions\": {\n    \"isOnReports\": false,\n    \"isOnInvoices\": false\n  },\n  \"annualTaxReturnFormType\": \"W2\",\n  \"isMedicalPlanProvided\": false,\n  \"payFrequencies\": \"Weekly\",\n  \"billingLevel\": \"Company\",\n  \"bankAccountLevel\": \"Company\",\n  \"bankAccounts\": [\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"payroll\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"tax\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"directDeposit\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"billing\"\n    }\n  ],\n  \"taxService\": \"Full\",\n  \"eftpsEnrollmentStatus\": \"Active\",\n  \"trustService\": \"All\",\n  \"isOfficialBankCheckUsed\": false,\n  \"federalTaxReporting\": {\n    \"taxDepositFrequency\": {\n      \"federal\": \"SemiWeekly\",\n      \"federal943\": \"SemiWeekly\",\n      \"federal945\": \"SemiWeekly\",\n      \"federalUnemploymentInsuranceTax\": \"Quarterly\"\n    },\n    \"exemptions\": {\n      \"isFederalTaxExempt\": false,\n      \"isEmployeeOasdiExempt\": false,\n      \"isEmployerOasdiExempt\": false,\n      \"isEmployeeMedicareExempt\": false,\n      \"isEmployerMedicareExempt\": false,\n      \"isFederalUnemploymentInsuranceExempt\": false\n    },\n    \"taxTransferLevel\": \"None\",\n    \"paymentMethod\": \"Check\"\n  },\n  \"defaultSortingAndGrouping\": {\n    \"employees\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"DepartmentName\"\n    },\n    \"checks\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"Department\"\n    }\n  },\n  \"isDeductionsZeroed\": false,\n  \"autoPayTrigger\": \"Remote\",\n  \"analytics\": {\n    \"isLicensed\": false,\n    \"isEnabled\": false\n  },\n  \"checkOptions\": {\n    \"isDirectDepositNumberShown\": false,\n    \"isPayRateShown\": true,\n    \"isSsnShown\": \"Last4\",\n    \"isEinShown\": false,\n    \"isYearToDateEarningsShown\": true,\n    \"isShiftsShown\": false,\n    \"isManualChecksShownInEmployeePortal\": false,\n    \"isShortfallsShown\": false,\n    \"isTimeClockPunchShown\": false,\n    \"isCheckSplitByDbdt\": false,\n    \"reprintTimeOffBalance\": \"Current\",\n    \"isDoubleSidedPrinted\": false,\n    \"isStateUnemploymentInsuranceSummaryShown\": false,\n    \"signaturePrintedOn\": \"AllChecks\",\n    \"printTargetMode\": \"AlwaysPrint\",\n    \"isManualCheckPrintedAsStubs\": false,\n    \"autoLaborDistributionLevel\": \"ShowLocationAndJob\",\n    \"printFormType\": \"I\"\n  },\n  \"taxOptions\": {\n    \"stateCalculationPrecedence\": \"No\",\n    \"isDeductionShortfallsMadeUp\": false,\n    \"isLocalTaxesComputedFirst\": true,\n    \"isReturnQueueOnHold\": false,\n    \"isExternalTaxAgencyUsed\": false,\n    \"nameToUseOnReturn\": \"Primary\",\n    \"autoEnlistReturns\": \"UseEnlistGroups\"\n  },\n  \"excludeReportsOrChecks\": \"None\",\n  \"isBillingCheckToCpa\": false,\n  \"isDbdtFlatFeeProrated\": true,\n  \"checkTimeOffAvailability\": \"Yes\",\n  \"miscellaneousDefaults\": {\n    \"payFrequency\": {\n      \"hourlyEmployees\": \"Weekly\",\n      \"salariedEmployees\": \"Weekly\"\n    },\n    \"withholding\": \"Single\",\n    \"isLimitTo1099Applied\": true,\n    \"distributions\": \"DistributeBoth\",\n    \"isBenefitsEligible\": false,\n    \"isEmployeeVoucherPrinted\": true,\n    \"employeeAutoReduction\": \"Both\"\n  },\n  \"isCobraAdminFeeCharged\": false,\n  \"creditHold\": \"None\",\n  \"isTimeOffAccrualWithEvolution\": false,\n  \"isSmokingFactoredInBenefitRates\": false,\n  \"contact\": {\n    \"name\": \"Cheri\",\n    \"designation\": null,\n    \"email\": \"test@test.com\",\n    \"phones\": [\n      {\n        \"number\": \"802-825-6516\",\n        \"description\": null\n      }\n    ]\n  }\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1bd3fce3-11aa-1a32-2a54-14f78fcdfdd8",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/10",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fd46b7a4-e26a-37ef-308a-5298d7a8b24a",
+          "name": "Companies",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e8ebb037-5d66-7202-39ee-f2c2b4914d74",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "0feb2a3c-9b59-4861-ad71-1ea06d1077dd",
+      "name": "Division",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "7da16e59-505f-f54c-5567-35f234470b22",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"North Boat Division\",\n  \"name\": \"North Boat Division\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b284aae9-76c0-5dbd-9841-7268799a7ef1",
+          "name": "Division (Minimum)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"East Boat Division\",\n  \"name\": \"East Boat Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "13a35ae5-58fc-1640-1a12-0a85bb50099f",
+          "name": "Division (Invalid Auth)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer xyz",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"Invalid Authorization Division\",\n  \"name\": \"Invalid Authorization Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fcc14f23-496b-ac15-f538-65a8c611dbb1",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1752,\n  \"companyId\": 8,\n  \"shortName\": \"NBD New Name 2\",\n  \"name\": \"NBD New Name 2\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "477bdcee-568c-9720-d9ed-561ea0d48c42",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/1753",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f61c9af8-5186-fa78-303e-ff8706bbb401",
+          "name": "Divisions",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1cf27086-d7ed-768a-5ffb-7b3b8c084a0c",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "63e2ed57-140c-60e1-a675-b1ade3c56765",
+      "name": "Department",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "430f8978-e0e3-26be-c9ae-012353837bf6",
+          "name": "Department",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"Test Department\",\n  \"name\": \"Test Department\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ebe0378b-a466-6a3d-7c00-1bee04b0adc0",
+          "name": "Departments",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"North Boat Division\",\n  \"name\": \"North Boat Division\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0d6b6e77-b285-4642-3f42-2fbac6b291a8",
+          "name": "Department ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"North Boat Division\",\n  \"name\": \"North Boat Division\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "aea0fef0-011f-2118-e890-2eb186e05c13",
+          "name": "Department",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 15,\n  \"branchId\": 10,\n  \"shortName\": \"Ticket\",\n  \"name\": \"Ticket Sales\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "03082151-6d22-d45a-3531-96bc25350d8c",
+          "name": "Department",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 204\"] = responseCode.code === 204;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
