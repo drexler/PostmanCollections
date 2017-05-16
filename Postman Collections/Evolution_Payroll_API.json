@@ -725,6 +725,128 @@
       ]
     },
     {
+      "_postman_id": "aedff160-6683-e9d0-577f-32ae44a6a0f2",
+      "name": "Teams copy",
+      "description": "Team endpoints",
+      "item": [
+        {
+          "_postman_id": "b9d807ef-8dae-ad7f-6207-f634f1dd2a36",
+          "name": "Team",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/teams",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DepartmentId\": 15,\n  \"Number\": \"Gloria\",\n  \"Name\": \"Gloria\",\n  \"HomeCoStateId\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"DisplayOption\": \"Show\",\n  \"Id\": 0\n}"
+            },
+            "description": "Create a new branch"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "306c0e6e-a0d4-c13f-137b-65af0dfab02d",
+          "name": "Teams",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Gets all teams"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "6a5a94ea-db5b-1c5a-c701-2d86c672d8fc",
+          "name": "Team",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f9cae4d6-b2d4-e2e9-31a2-108e5be1a1f1",
+          "name": "Team",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/teams/{{teamId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DepartmentId\": 15,\n  \"Number\": \"              Gloria\",\n  \"Name\": \"Gloria's\",\n  \"HomeCoStateId\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"DisplayOption\": \"Show\",\n  \"Id\": 3\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "931cdd94-78a6-d11c-a531-0de983f5a92e",
+          "name": "Team",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/teams/74",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a team by id"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
