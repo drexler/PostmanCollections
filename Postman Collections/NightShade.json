@@ -452,7 +452,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"Test Department\",\n  \"name\": \"Test Department\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"DeptofMysteries \",\n  \"name\": \"DeptofMysteries\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
             },
             "description": "Create a new department"
           },
