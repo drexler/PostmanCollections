@@ -375,7 +375,7 @@
         },
         {
           "_postman_id": "86f202fb-c409-b799-917f-db60e472b840",
-          "name": "Departments copy",
+          "name": "Departments( Short Version)",
           "request": {
             "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments",
             "method": "GET",
