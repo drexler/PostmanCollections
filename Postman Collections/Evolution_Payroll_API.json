@@ -938,7 +938,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"DepartmentId\": 15,\n  \"Number\": \"Gloria\",\n  \"Name\": \"Gloria\",\n  \"HomeCoStateId\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"DisplayOption\": \"Show\",\n  \"Id\": 0\n}"
+              "raw": "{ \"DepartmentId\": \"15\", \"Number\": \"TestTeamsters\", \"Name\": \"TestTeamsters\", \"DisplayOption\": \"Show\", \"HomeCoStateId\": 2, \"PayrollBankAccountId\": null, \"TaxBankAccountId\": null, \"BillingBankAccountId\": null, \"DirectDepositBankAccountId\": null }"
             },
             "description": "Create a new branch"
           },
