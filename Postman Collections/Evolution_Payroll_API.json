@@ -847,6 +847,128 @@
       ]
     },
     {
+      "_postman_id": "abb569d9-5c05-63dd-94cb-140040302908",
+      "name": "Division copy",
+      "description": "Division endpoints",
+      "item": [
+        {
+          "_postman_id": "d913f31c-a039-7c91-e868-6a778409c34d",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "45968800-be45-ba51-6e58-e7324fb3acaa",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "603b75e6-072a-918f-9d68-e0baab1da7b4",
+          "name": "Divisions",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8803f6cf-ce98-4c29-879f-792ae744aff0",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/1",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "99610070-037b-6375-2be3-b05cb017aa50",
+          "name": "Division",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"Number\": \"                Wgen\",\n  \"Name\": \"West Genesse Divsion\",\n  \"DisplayOption\": \"Show\",\n  \"HomeStatesNumber\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"Id\": 7\n}"
+            },
+            "description": "Create a new division"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
