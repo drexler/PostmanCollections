@@ -592,6 +592,156 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "545c9cbc-9fc2-eb64-fecd-ad9d4c3dea69",
+      "name": "Company copy",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "bde8898c-bcff-c308-5e86-6f5eff48574e",
+          "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"clientId\": 124,\n  \"invoiceBillingId\": 2,\n  \"shortName\": \"Ido's Company\",\n  \"email\": \"aq@gmail.com\",\n  \"fein\": \"158884629\",\n  \"legalName\": \"\",\n  \"name\": \"Ido's Company\",\n  \"doingBusinessAs\": \"\",\n  \"address\": {\n    \"addressLine1\": \"2 Church Street\",\n    \"addressLine2\": \"\",\n    \"city\": \"Burlington\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05401\",\n    \"county\": \"\"\n  },\n  \"legalAddress\": {\n    \"addressLine1\": \"2 oaky bush\",\n    \"addressLine2\": \"\",\n    \"city\": \"essex\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05452\",\n    \"county\": \"\"\n  },\n  \"dbdtLevel\": \"Division\",\n  \"initialPayrollOrCheckDate\": \"2013-05-17T00:00:00\",\n  \"initialEffectiveDate\": \"2013-01-01T00:00:00\",\n  \"businessType\": null,\n  \"employerType\": null,\n  \"businessStructure\": null,\n  \"isEvolutionCompanySuccessor\": false,\n  \"isRestaurant\": false,\n  \"isNonProfit\": false,\n  \"processPriority\": 1,\n  \"status\": \"Active\",\n  \"statusEffectiveDate\": \"2013-05-01T00:00:00\",\n  \"numberOfDaysForDebit\": 2,\n  \"processingThresholdActions\": {\n    \"payroll\": \"NA\",\n    \"ach\": \"NA\"\n  },\n  \"employeePortal\": {\n    \"isEnabled\": false,\n    \"selfServiceSecurityOptions\": {\n      \"employeeInfo\": \"No\",\n      \"timeOff\": \"No\",\n      \"benefits\": \"No\",\n      \"directDeposit\": \"No\"\n    }\n  },\n  \"hrConfiguration\": \"No\",\n  \"isLastTaxReturnSubmitted\": false,\n  \"impoundModes\": {\n    \"trust\": \"Ach\",\n    \"tax\": \"Ach\",\n    \"taxException\": \"NA\",\n    \"directDeposit\": \"Ach\",\n    \"billing\": \"Ach\",\n    \"workersCompensation\": \"None\"\n  },\n  \"isTaxPaymentQuarterly\": true,\n  \"isManagerApprovalRequiredToProcessPayroll\": false,\n  \"acaCompliance\": {\n    \"averageHoursWorkedPeriod\": \"Weekly\",\n    \"isAverageHoursWorkedBasedOnProcessedPayrolls\": false,\n    \"defaultStatus\": \"DoesNotApply\",\n    \"isEducationalOrganization\": false\n  },\n  \"isPreNotesUsedInTransactions\": false,\n  \"cpaPrintOptions\": {\n    \"isOnReports\": false,\n    \"isOnInvoices\": false\n  },\n  \"annualTaxReturnFormType\": \"W2\",\n  \"isMedicalPlanProvided\": false,\n  \"payFrequencies\": \"Weekly\",\n  \"billingLevel\": \"Company\",\n  \"bankAccountLevel\": \"Company\",\n  \"bankAccounts\": [\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"payroll\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"tax\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"directDeposit\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"billing\"\n    }\n  ],\n  \"taxService\": \"Full\",\n  \"eftpsEnrollmentStatus\": \"Active\",\n  \"trustService\": \"All\",\n  \"isOfficialBankCheckUsed\": false,\n  \"federalTaxReporting\": {\n    \"taxDepositFrequency\": {\n      \"federal\": \"SemiWeekly\",\n      \"federal943\": \"SemiWeekly\",\n      \"federal945\": \"SemiWeekly\",\n      \"federalUnemploymentInsuranceTax\": \"Quarterly\"\n    },\n    \"exemptions\": {\n      \"isFederalTaxExempt\": false,\n      \"isEmployeeOasdiExempt\": false,\n      \"isEmployerOasdiExempt\": false,\n      \"isEmployeeMedicareExempt\": false,\n      \"isEmployerMedicareExempt\": false,\n      \"isFederalUnemploymentInsuranceExempt\": false\n    },\n    \"taxTransferLevel\": \"None\",\n    \"paymentMethod\": \"Check\"\n  },\n  \"defaultSortingAndGrouping\": {\n    \"employees\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"DepartmentName\"\n    },\n    \"checks\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"Department\"\n    }\n  },\n  \"isDeductionsZeroed\": false,\n  \"autoPayTrigger\": \"Remote\",\n  \"analytics\": {\n    \"isLicensed\": false,\n    \"isEnabled\": false\n  },\n  \"checkOptions\": {\n    \"isDirectDepositNumberShown\": false,\n    \"isPayRateShown\": true,\n    \"isSsnShown\": \"Last4\",\n    \"isEinShown\": false,\n    \"isYearToDateEarningsShown\": true,\n    \"isShiftsShown\": false,\n    \"isManualChecksShownInEmployeePortal\": false,\n    \"isShortfallsShown\": false,\n    \"isTimeClockPunchShown\": false,\n    \"isCheckSplitByDbdt\": false,\n    \"reprintTimeOffBalance\": \"Current\",\n    \"isDoubleSidedPrinted\": false,\n    \"isStateUnemploymentInsuranceSummaryShown\": false,\n    \"signaturePrintedOn\": \"AllChecks\",\n    \"printTargetMode\": \"AlwaysPrint\",\n    \"isManualCheckPrintedAsStubs\": false,\n    \"autoLaborDistributionLevel\": \"ShowLocationAndJob\",\n    \"printFormType\": \"I\"\n  },\n  \"taxOptions\": {\n    \"stateCalculationPrecedence\": \"No\",\n    \"isDeductionShortfallsMadeUp\": false,\n    \"isLocalTaxesComputedFirst\": true,\n    \"isReturnQueueOnHold\": false,\n    \"isExternalTaxAgencyUsed\": false,\n    \"nameToUseOnReturn\": \"Primary\",\n    \"autoEnlistReturns\": \"UseEnlistGroups\"\n  },\n  \"excludeReportsOrChecks\": \"None\",\n  \"isBillingCheckToCpa\": false,\n  \"isDbdtFlatFeeProrated\": true,\n  \"checkTimeOffAvailability\": \"Yes\",\n  \"miscellaneousDefaults\": {\n    \"payFrequency\": {\n      \"hourlyEmployees\": \"Weekly\",\n      \"salariedEmployees\": \"Weekly\"\n    },\n    \"withholding\": \"Single\",\n    \"isLimitTo1099Applied\": true,\n    \"distributions\": \"DistributeBoth\",\n    \"isBenefitsEligible\": false,\n    \"isEmployeeVoucherPrinted\": true,\n    \"employeeAutoReduction\": \"Both\"\n  },\n  \"isCobraAdminFeeCharged\": false,\n  \"creditHold\": \"None\",\n  \"isTimeOffAccrualWithEvolution\": false,\n  \"isSmokingFactoredInBenefitRates\": false,\n  \"contact\": {\n    \"name\": \"Cheri\",\n    \"designation\": null,\n    \"email\": \"rest@test.com\",\n    \"phones\": [\n      {\n        \"number\": \"802-825-6516\",\n        \"description\": null\n      }\n    ]\n  }\n}"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8e232a71-b74a-0008-4645-32e96fe23a2e",
+          "name": "Company (Minimum)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"clientId\": 124,\r\n  \"invoiceBillingId\": 2,\r\n  \"shortName\": \"BMRC765\",\r\n  \"fein\": \"158884629\",\r\n  \"name\": \"BareMinimumRequiredForCompany\",\r\n  \"address\": {\r\n    \"addressLine1\": \"2 Church Street\",\r\n    \"city\": \"Burlington\",\r\n    \"state\": \"VT\",\r\n    \"postalCode\": \"05401\"\r\n  },\r\n  \"legalAddress\": {\r\n    \"addressLine1\": \"2 Church Street\",\r\n    \"city\": \"Burlington\",\r\n    \"state\": \"VT\",\r\n    \"postalCode\": \"05452\"\r\n\r\n  },\r\n  \r\n  \"bankAccounts\": [\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"payroll\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"tax\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"directDeposit\"\r\n    },\r\n    {\r\n      \"id\": 22,\r\n      \"designation\": \"billing\"\r\n    }\r\n  ],\r\n  \"checkOptions\": {\r\n    \"printFormType\": \"I\"\r\n  }\r\n\r\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9b130472-3494-c08f-07dc-0a95c0a96ca7",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 8,\n  \"clientId\": 124,\n  \"invoiceBillingId\": 2,\n  \"shortName\": \"WEB650 - 1\",\n  \"email\": \"aq@gmail.com\",\n  \"fein\": \"158884629\",\n  \"legalName\": \"\",\n  \"name\": \"The Styling Salon (DBDT)\",\n  \"doingBusinessAs\": \"\",\n  \"address\": {\n    \"addressLine1\": \"2 Church Street\",\n    \"addressLine2\": \"\",\n    \"city\": \"Burlington\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05401\",\n    \"county\": \"\"\n  },\n  \"legalAddress\": {\n    \"addressLine1\": \"2 oaky bush\",\n    \"addressLine2\": \"\",\n    \"city\": \"essex\",\n    \"state\": \"VT\",\n    \"postalCode\": \"05452\",\n    \"county\": \"\"\n  },\n  \"dbdtLevel\": \"Division\",\n  \"initialPayrollOrCheckDate\": \"2013-05-17T00:00:00\",\n  \"initialEffectiveDate\": \"2013-01-01T00:00:00\",\n  \"businessType\": \"NA\",\n  \"employerType\": \"NoneApply\",\n  \"businessStructure\": \"LLC\",\n  \"isEvolutionCompanySuccessor\": false,\n  \"isRestaurant\": false,\n  \"isNonProfit\": false,\n  \"processPriority\": 1,\n  \"status\": \"Active\",\n  \"statusEffectiveDate\": \"2013-05-01T00:00:00\",\n  \"numberOfDaysForDebit\": 2,\n  \"processingThresholdActions\": {\n    \"payroll\": \"NA\",\n    \"ach\": \"NA\"\n  },\n  \"employeePortal\": {\n    \"isEnabled\": false,\n    \"selfServiceSecurityOptions\": {\n      \"employeeInfo\": \"No\",\n      \"timeOff\": \"No\",\n      \"benefits\": \"No\",\n      \"directDeposit\": \"No\"\n    }\n  },\n  \"hrConfiguration\": \"No\",\n  \"isLastTaxReturnSubmitted\": false,\n  \"impoundModes\": {\n    \"trust\": \"Ach\",\n    \"tax\": \"Ach\",\n    \"taxException\": \"NA\",\n    \"directDeposit\": \"Ach\",\n    \"billing\": \"Ach\",\n    \"workersCompensation\": \"None\"\n  },\n  \"isTaxPaymentQuarterly\": true,\n  \"isManagerApprovalRequiredToProcessPayroll\": false,\n  \"acaCompliance\": {\n    \"averageHoursWorkedPeriod\": \"Weekly\",\n    \"isAverageHoursWorkedBasedOnProcessedPayrolls\": false,\n    \"defaultStatus\": \"DoesNotApply\",\n    \"isEducationalOrganization\": false\n  },\n  \"isPreNotesUsedInTransactions\": false,\n  \"cpaPrintOptions\": {\n    \"isOnReports\": false,\n    \"isOnInvoices\": false\n  },\n  \"annualTaxReturnFormType\": \"W2\",\n  \"isMedicalPlanProvided\": false,\n  \"payFrequencies\": \"Weekly\",\n  \"billingLevel\": \"Company\",\n  \"bankAccountLevel\": \"Company\",\n  \"bankAccounts\": [\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"payroll\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"tax\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"directDeposit\"\n    },\n    {\n      \"id\": 22,\n      \"bankName\": null,\n      \"accountNumber\": null,\n      \"routingNumber\": null,\n      \"type\": null,\n      \"designation\": \"billing\"\n    }\n  ],\n  \"taxService\": \"Full\",\n  \"eftpsEnrollmentStatus\": \"Active\",\n  \"trustService\": \"All\",\n  \"isOfficialBankCheckUsed\": false,\n  \"federalTaxReporting\": {\n    \"taxDepositFrequency\": {\n      \"federal\": \"SemiWeekly\",\n      \"federal943\": \"SemiWeekly\",\n      \"federal945\": \"SemiWeekly\",\n      \"federalUnemploymentInsuranceTax\": \"Quarterly\"\n    },\n    \"exemptions\": {\n      \"isFederalTaxExempt\": false,\n      \"isEmployeeOasdiExempt\": false,\n      \"isEmployerOasdiExempt\": false,\n      \"isEmployeeMedicareExempt\": false,\n      \"isEmployerMedicareExempt\": false,\n      \"isFederalUnemploymentInsuranceExempt\": false\n    },\n    \"taxTransferLevel\": \"None\",\n    \"paymentMethod\": \"Check\"\n  },\n  \"defaultSortingAndGrouping\": {\n    \"employees\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"DepartmentName\"\n    },\n    \"checks\": {\n      \"sortBy\": \"Alpha\",\n      \"groupBy\": \"Department\"\n    }\n  },\n  \"isDeductionsZeroed\": false,\n  \"autoPayTrigger\": \"Remote\",\n  \"analytics\": {\n    \"isLicensed\": false,\n    \"isEnabled\": false\n  },\n  \"checkOptions\": {\n    \"isDirectDepositNumberShown\": false,\n    \"isPayRateShown\": true,\n    \"isSsnShown\": \"Last4\",\n    \"isEinShown\": false,\n    \"isYearToDateEarningsShown\": true,\n    \"isShiftsShown\": false,\n    \"isManualChecksShownInEmployeePortal\": false,\n    \"isShortfallsShown\": false,\n    \"isTimeClockPunchShown\": false,\n    \"isCheckSplitByDbdt\": false,\n    \"reprintTimeOffBalance\": \"Current\",\n    \"isDoubleSidedPrinted\": false,\n    \"isStateUnemploymentInsuranceSummaryShown\": false,\n    \"signaturePrintedOn\": \"AllChecks\",\n    \"printTargetMode\": \"AlwaysPrint\",\n    \"isManualCheckPrintedAsStubs\": false,\n    \"autoLaborDistributionLevel\": \"ShowLocationAndJob\",\n    \"printFormType\": \"I\"\n  },\n  \"taxOptions\": {\n    \"stateCalculationPrecedence\": \"No\",\n    \"isDeductionShortfallsMadeUp\": false,\n    \"isLocalTaxesComputedFirst\": true,\n    \"isReturnQueueOnHold\": false,\n    \"isExternalTaxAgencyUsed\": false,\n    \"nameToUseOnReturn\": \"Primary\",\n    \"autoEnlistReturns\": \"UseEnlistGroups\"\n  },\n  \"excludeReportsOrChecks\": \"None\",\n  \"isBillingCheckToCpa\": false,\n  \"isDbdtFlatFeeProrated\": true,\n  \"checkTimeOffAvailability\": \"Yes\",\n  \"miscellaneousDefaults\": {\n    \"payFrequency\": {\n      \"hourlyEmployees\": \"Weekly\",\n      \"salariedEmployees\": \"Weekly\"\n    },\n    \"withholding\": \"Single\",\n    \"isLimitTo1099Applied\": true,\n    \"distributions\": \"DistributeBoth\",\n    \"isBenefitsEligible\": false,\n    \"isEmployeeVoucherPrinted\": true,\n    \"employeeAutoReduction\": \"Both\"\n  },\n  \"isCobraAdminFeeCharged\": false,\n  \"creditHold\": \"None\",\n  \"isTimeOffAccrualWithEvolution\": false,\n  \"isSmokingFactoredInBenefitRates\": false,\n  \"contact\": {\n    \"name\": \"Cheri\",\n    \"designation\": null,\n    \"email\": \"test@test.com\",\n    \"phones\": [\n      {\n        \"number\": \"802-825-6516\",\n        \"description\": null\n      }\n    ]\n  }\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3566c90c-4b69-a3b8-0bbc-d8c9d9607090",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/10",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "aa1d7e68-2069-ab16-a32d-7e7f47ae1e90",
+          "name": "Companies",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ea0a8809-0b39-6868-c2e6-29d241506a47",
+          "name": "Company",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
