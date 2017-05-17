@@ -650,6 +650,73 @@
       "name": "Teams",
       "description": "",
       "item": []
+    },
+    {
+      "_postman_id": "c5f77218-1b9f-db51-a141-693310d56ad3",
+      "name": "Team",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var responseData = JSON.parse(responseBody);",
+              "",
+              "postman.setEnvironmentVariable(\"teamId\", responseData[\"id\"]);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestT3\",\n      \"name\": \"Test3\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+        },
+        "description": "Create a new company"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "2dc3eaf8-6371-fe2e-8233-aca52ce64c27",
+      "name": "Team",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 178,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+        },
+        "description": "Get list of companies"
+      },
+      "response": []
     }
   ]
 }
