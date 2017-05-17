@@ -188,6 +188,18 @@
         {
           "_postman_id": "00db3ed5-2728-e5ba-a472-81f4287b9506",
           "name": "Company",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}",
             "method": "PUT",
