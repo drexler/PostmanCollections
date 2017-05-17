@@ -894,7 +894,7 @@
         },
         {
           "_postman_id": "00ca6944-114c-bd57-a5ed-1899b39e0ce1",
-          "name": "Team copy",
+          "name": "Team(Debugger)",
           "request": {
             "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/teams/{{teamId}}",
             "method": "PUT",
