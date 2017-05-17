@@ -150,6 +150,18 @@
         {
           "_postman_id": "32e66dc1-5274-3fb6-ed0a-8b884140c515",
           "name": "Company (Minimum)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
             "method": "POST",
