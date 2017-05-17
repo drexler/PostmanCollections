@@ -912,7 +912,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"DepartmentId\": 15,\n  \"Number\": \"              Gloria\",\n  \"Name\": \"Gloria's\",\n  \"HomeCoStateId\": 2,\n  \"OverridePayRate\": null,\n  \"OverrideEeRateNumber\": null,\n  \"PayrollBankAccountId\": null,\n  \"TaxBankAccountId\": null,\n  \"BillingBankAccountId\": null,\n  \"DirectDepositBankAccountId\": null,\n  \"DisplayOption\": \"Show\",\n  \"Id\": 3\n}"
+              "raw": "{ \"Id\": 203, \"DepartmentId\": \"15\", \"Number\": \"TestTeamsters\", \"Name\": \"TestTeamsters\", \"DisplayOption\": \"Show\", \"HomeCoStateId\": 2, \"PayrollBankAccountId\": null, \"TaxBankAccountId\": null, \"BillingBankAccountId\": null, \"DirectDepositBankAccountId\": null }"
             },
             "description": "Create a new division"
           },
