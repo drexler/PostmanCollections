@@ -592,6 +592,171 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "7755e1e5-7ab4-9bb5-f285-610ef6f25606",
+      "name": "Division copy",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "19405025-f30b-d3d1-d89c-113ba327dec1",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"North Boat Division\",\n  \"name\": \"North Boat Division\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3be14cce-ef88-9153-bed1-ab0cae2bc4bc",
+          "name": "Division (Minimum)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"East Boat Division\",\n  \"name\": \"East Boat Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "465283a7-e4f6-c985-985e-5d33bc5c99c8",
+          "name": "Division (Invalid Auth)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer xyz",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"Invalid Authorization Division\",\n  \"name\": \"Invalid Authorization Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3149d244-2266-22a5-a222-381a8cacc240",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1752,\n  \"companyId\": 8,\n  \"shortName\": \"NBD New Name 2\",\n  \"name\": \"NBD New Name 2\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "53d63f1a-9b02-55f4-596c-fb4b9f07ebd4",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/1753",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "29b4094f-312a-6f24-7d81-7fe7ac97e9dc",
+          "name": "Divisions",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7b28dd42-fac6-e08a-16fb-bd58a18429a0",
+          "name": "Division",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
