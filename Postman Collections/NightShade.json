@@ -81,7 +81,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
                 ]
               }
             }
