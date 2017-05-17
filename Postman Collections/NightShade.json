@@ -735,6 +735,24 @@
         "description": "Get list of companies"
       },
       "response": []
+    },
+    {
+      "_postman_id": "aefcb806-99d9-0465-096e-c21ad6933680",
+      "name": "Teams",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get list of companies"
+      },
+      "response": []
     }
   ]
 }
