@@ -686,7 +686,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestT3\",\n      \"name\": \"Test3\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+          "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestT453\",\n      \"name\": \"Test334\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
         },
         "description": "Create a new company"
       },
@@ -845,6 +845,50 @@
           "raw": "{\n      \"id\": 186,\n      \"departmentId\": 15,\n      \"shortName\": \"TeDifferent\",\n      \"name\": \"TestTeDiff\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
         },
         "description": "Create a new company"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1fe12dff-c4af-1f6b-6d50-8dd2b560ee2b",
+      "name": "Teams (Invalid uri)",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/672/teams",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get list of companies"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "78509e8d-41aa-aae8-57a3-7188040bb2bc",
+      "name": "Team(Debugger)",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 203,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+        },
+        "description": "Get list of companies"
       },
       "response": []
     }
