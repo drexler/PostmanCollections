@@ -186,6 +186,18 @@
         {
           "_postman_id": "e5d6b73c-4cdf-9dcd-7760-62048df6cdf2",
           "name": "Branch",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/branches",
             "method": "POST",
