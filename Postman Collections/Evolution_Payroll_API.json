@@ -901,7 +901,7 @@
       "item": [
         {
           "_postman_id": "593cc358-5991-50ba-f916-1fad57949bff",
-          "name": "Local Taxes",
+          "name": "Get CoLocal Taxes",
           "event": [
             {
               "listen": "test",
@@ -967,7 +967,7 @@
         },
         {
           "_postman_id": "79fd7274-d3f0-41c4-ec04-5d9942e9cc07",
-          "name": "Local Taxes",
+          "name": "Create CoLocal Tax",
           "event": [
             {
               "listen": "test",
@@ -1008,7 +1008,7 @@
         },
         {
           "_postman_id": "0e6453c9-b6a3-6be7-94ea-216c30ff1585",
-          "name": "Delete Local Tax",
+          "name": "Delete CoLocal Tax",
           "event": [
             {
               "listen": "test",
@@ -1041,7 +1041,7 @@
         },
         {
           "_postman_id": "ae8a9162-9ec1-d166-d1f8-dc0e70be2848",
-          "name": "Local Tax",
+          "name": "Update CoLocal Tax",
           "event": [
             {
               "listen": "test",
