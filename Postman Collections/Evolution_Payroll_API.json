@@ -1388,7 +1388,7 @@
                   "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
                   "",
                   "var responseData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"ee\", responseData[\"Id\"]);"
+                  "postman.setEnvironmentVariable(\"eeLo\", responseData[\"Id\"]);"
                 ]
               }
             }
