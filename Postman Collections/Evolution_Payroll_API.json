@@ -895,6 +895,191 @@
       ]
     },
     {
+      "_postman_id": "f891ea95-6b03-193b-4c32-e33c21d5be66",
+      "name": "Company Local Taxes",
+      "description": "Team endpoints",
+      "item": [
+        {
+          "_postman_id": "593cc358-5991-50ba-f916-1fad57949bff",
+          "name": "Local Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/localtaxes",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0e0eab1b-de27-49c9-a68d-dcd4079133d9",
+          "name": "Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/localtaxes/{{coLocalTaxId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "79fd7274-d3f0-41c4-ec04-5d9942e9cc07",
+          "name": "Local Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"coLocalTaxId\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/localtaxes",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"TaxRate\": null,\n  \"StateId\": 38,\n  \"LocalTaxId\": 14,\n  \"LocalEinNumber\": \"123456789\",\n  \"PaymentMethod\": \"Check\",\n  \"EFTStatus\": \"None\",\n  \"LocalDepositFrequencyId\": 4876,\n  \"FinalTaxReturn\": false,\n  \"LastTaxReturn\": false,\n  \"Exempt\": false,\n  \"AppliedFor\": false,\n  \"AutocreateOnNewHire\": false,\n  \"SelfAdjustTax\": false,\n  \"Deduct\": true,\n  \"IsActive\": true,\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a local tax for a company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0e6453c9-b6a3-6be7-94ea-216c30ff1585",
+          "name": "Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 204\"] = responseCode.code === 204;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/localtaxes/{{coLocalTaxId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a specified local tax for a given company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ae8a9162-9ec1-d166-d1f8-dc0e70be2848",
+          "name": "Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/localtaxes/{{coLocalTaxId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"TaxRate\": null,\n  \"StateId\": 38,\n  \"LocalTaxId\": 14,\n  \"LocalEinNumber\": \"123456789\",\n  \"PaymentMethod\": \"Check\",\n  \"EFTStatus\": \"None\",\n  \"LocalDepositFrequencyId\": 4876,\n  \"FinalTaxReturn\": false,\n  \"LastTaxReturn\": false,\n  \"Exempt\": false,\n  \"AppliedFor\": false,\n  \"AutocreateOnNewHire\": false,\n  \"SelfAdjustTax\": false,\n  \"Deduct\": true,\n  \"IsActive\": true,\n  \"Id\": 18\n}"
+            },
+            "description": "Updates a specific local tax"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
