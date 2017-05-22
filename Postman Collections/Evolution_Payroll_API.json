@@ -1641,7 +1641,7 @@
         },
         {
           "_postman_id": "6c0ebc2b-9298-ecff-f7cf-4403fec0aeb5",
-          "name": "Delete EE Local Tax",
+          "name": "Delete EE State Tax",
           "event": [
             {
               "listen": "test",
