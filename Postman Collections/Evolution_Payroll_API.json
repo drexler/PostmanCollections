@@ -1185,7 +1185,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"VT-SUI\",\n  \"StateId\": 2,\n  \"SySuiId\": 65,\n  \"Id\": 0\n}"
+              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"VT-SUINew\",\n  \"StateId\": 2,\n  \"SySuiId\": 45,\n  \"Id\": 0\n}"
             },
             "description": "Creates a local tax for a company"
           },
