@@ -1490,6 +1490,191 @@
       ]
     },
     {
+      "_postman_id": "458618f7-15bf-ed85-b490-494bfcbfdf76",
+      "name": "Employee Local Taxes copy",
+      "description": "Team endpoints",
+      "item": [
+        {
+          "_postman_id": "9df5ff67-dfbe-e413-ffe9-45b38c492d3e",
+          "name": "Get All EE Local Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "054df457-1be2-4185-68b3-d81d3ccb36f6",
+          "name": "Get EE Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c599f28c-fc50-0b1e-db7a-f136c2d8a2e6",
+          "name": "Create EE Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"ee\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a local tax record for an employee"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8db19f3f-eeac-ece9-103f-f7296047ca72",
+          "name": "Update EE Local Tax ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 1\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d2327c24-ee76-08b0-d0af-09e5a253a35a",
+          "name": "Delete EE Local Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 204\"] = responseCode.code === 204;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
