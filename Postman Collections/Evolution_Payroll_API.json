@@ -1080,6 +1080,191 @@
       ]
     },
     {
+      "_postman_id": "3e1dfe14-724c-7ddc-381d-b182f81a1964",
+      "name": "Company SUI Taxes",
+      "description": "Team endpoints",
+      "item": [
+        {
+          "_postman_id": "7e685ec0-728b-0061-faf6-02a7af8422be",
+          "name": "SUI Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "4dba83dd-7d2b-0e97-f97c-84e7e5e8fd27",
+          "name": "SUI Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui/{{coSuiTaxId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9fa6fd6e-ea39-f6f5-b406-d26839830b1e",
+          "name": "SUI Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TaxId\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"VT-SUI\",\n  \"StateId\": 2,\n  \"SySuiId\": 65,\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a local tax for a company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2f853399-36d3-71ea-cb31-cfc58a6a0ced",
+          "name": "SUI Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 204\"] = responseCode.code === 204;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui/{{coSuiTaxId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a specified local tax for a given company."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "848fbe3f-882e-0fc3-24e9-2ee1c4ee7811",
+          "name": "SUI Tax",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui/{{coSuiTaxId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"VT-SUI\",\n  \"StateId\": 2,\n  \"SySuiId\": 25,\n  \"AlternateWage\": false,\n  \"PaymentMethod\": \"Check\",\n  \"FinalTaxReturn\": false,\n  \"AppliedFor\": false,\n  \"LastTaxReturn\": false,\n  \"IsActive\": true,\n  \"SuiReimburser\": false,\n  \"TaxReturnCode\": null,\n  \"GlTag\": null,\n  \"GlOffsetTag\": null,\n  \"RateLastReviewedDate\": null,\n  \"Id\": 1\n}"
+            },
+            "description": "Updates a specific sui tax"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
