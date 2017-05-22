@@ -1008,7 +1008,7 @@
         },
         {
           "_postman_id": "0e6453c9-b6a3-6be7-94ea-216c30ff1585",
-          "name": "Local Tax",
+          "name": "Delete Local Tax",
           "event": [
             {
               "listen": "test",
