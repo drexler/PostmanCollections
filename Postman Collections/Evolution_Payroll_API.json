@@ -1265,6 +1265,46 @@
       ]
     },
     {
+      "_postman_id": "5624d91e-155b-b118-cea5-4e729a3ef523",
+      "name": "Company State Taxes",
+      "description": "Team endpoints",
+      "item": [
+        {
+          "_postman_id": "2d35bb1b-5a55-6720-c75d-8dbcdab1c2fd",
+          "name": "State Taxes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/companystates",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
+            },
+            "description": "Retrieves all local taxes for a specified company."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
