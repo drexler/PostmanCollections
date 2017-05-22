@@ -1193,7 +1193,7 @@
         },
         {
           "_postman_id": "2f853399-36d3-71ea-cb31-cfc58a6a0ced",
-          "name": "SUI Tax",
+          "name": "Delete SUI Tax",
           "event": [
             {
               "listen": "test",
