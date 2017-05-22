@@ -934,7 +934,7 @@
         },
         {
           "_postman_id": "0e0eab1b-de27-49c9-a68d-dcd4079133d9",
-          "name": "Local Tax",
+          "name": "Get CoLocal Tax",
           "event": [
             {
               "listen": "test",
