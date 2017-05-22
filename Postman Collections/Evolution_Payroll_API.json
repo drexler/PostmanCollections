@@ -901,7 +901,7 @@
       "item": [
         {
           "_postman_id": "593cc358-5991-50ba-f916-1fad57949bff",
-          "name": "Get CoLocal Taxes",
+          "name": "Local Taxes",
           "event": [
             {
               "listen": "test",
@@ -967,7 +967,7 @@
         },
         {
           "_postman_id": "79fd7274-d3f0-41c4-ec04-5d9942e9cc07",
-          "name": "Create CoLocal Tax",
+          "name": "Local Taxes",
           "event": [
             {
               "listen": "test",
