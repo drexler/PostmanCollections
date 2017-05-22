@@ -1490,13 +1490,13 @@
       ]
     },
     {
-      "_postman_id": "458618f7-15bf-ed85-b490-494bfcbfdf76",
-      "name": "Employee Local Taxes copy",
+      "_postman_id": "7d89d6b4-e921-4952-a82c-d9308c3461bc",
+      "name": "Employee State Taxes",
       "description": "Team endpoints",
       "item": [
         {
-          "_postman_id": "9df5ff67-dfbe-e413-ffe9-45b38c492d3e",
-          "name": "Get All EE Local Taxes",
+          "_postman_id": "880851ce-23ae-fb59-65ac-de7741e2f903",
+          "name": "Get All EE State Taxes",
           "event": [
             {
               "listen": "test",
@@ -1510,7 +1510,7 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates",
             "method": "GET",
             "header": [
               {
@@ -1523,13 +1523,13 @@
               "mode": "raw",
               "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
             },
-            "description": "Retrieves all local taxes for a specified company."
+            "description": "Retrieves all state taxes for a specified company."
           },
           "response": []
         },
         {
-          "_postman_id": "054df457-1be2-4185-68b3-d81d3ccb36f6",
-          "name": "Get EE Local Tax",
+          "_postman_id": "ab72f512-8021-a7db-3386-efd28ce4e558",
+          "name": "Get EE State Tax",
           "event": [
             {
               "listen": "test",
@@ -1543,7 +1543,7 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates/{{eeStateTaxId}}",
             "method": "GET",
             "header": [
               {
@@ -1556,13 +1556,13 @@
               "mode": "raw",
               "raw": "{\r\n  \"CompanyId\": 8,\r\n  \"Number\": \"DIV-TestAndrew\",\r\n  \"Name\": \"DIV-TestAndrew\",\r\n  \"HomeStatesNumber\": 3\r\n}"
             },
-            "description": "Retrieves all local taxes for a specified company."
+            "description": "Retrieves all state taxes for a specified company."
           },
           "response": []
         },
         {
-          "_postman_id": "c599f28c-fc50-0b1e-db7a-f136c2d8a2e6",
-          "name": "Create EE Local Tax",
+          "_postman_id": "c0f809f8-a272-1d15-465c-af41b477a2d4",
+          "name": "Create EE State Tax",
           "event": [
             {
               "listen": "test",
@@ -1579,7 +1579,7 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates",
             "method": "POST",
             "header": [
               {
@@ -1595,15 +1595,15 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 0\n}"
+              "raw": "{\n  \"EmployeeId\": 12,\n  \"CompanyStateId\": 4,\n  \"SdiCompanyStateId\": 4,\n  \"SuiCompanyStateId\": 4,\n  \"TaxExemptions\": 1,\n  \"ToState\": null,\n  \"ReciprocalAmountPercentage\": null,\n  \"MinimumWage\": null,\n  \"EmployeeStateMaritalStatusId\": 51,\n  \"TaxCode\": null,\n  \"SalaryType\": \"NA\",\n  \"ReciprocalMethod\": \"TakeNone\",\n  \"County\": null,\n  \"CalculateSuiTaxableWagesFor1099\": \"N\",\n  \"TaxType\": \"None\",\n  \"TaxValue\": null,\n  \"EeStateTaxStatus\": \"Include\",\n  \"EeTaxStatusSdiExempt\": \"Include\",\n  \"EeTaxStatusSuiExempt\": \"Include\",\n  \"ErTaxStatusSdiExempt\": \"Include\",\n  \"ErTaxStatusSuiExempt\": \"Include\",\n  \"Id\": 0\n}"
             },
-            "description": "Creates a local tax record for an employee"
+            "description": "Creates a state tax record for an employee"
           },
           "response": []
         },
         {
-          "_postman_id": "8db19f3f-eeac-ece9-103f-f7296047ca72",
-          "name": "Update EE Local Tax ",
+          "_postman_id": "02eef01c-b2e2-1d27-fdff-b59545f5fc04",
+          "name": "Update EE State Tax",
           "event": [
             {
               "listen": "test",
@@ -1617,7 +1617,7 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates/{{eeStateTaxId}}",
             "method": "PUT",
             "header": [
               {
@@ -1633,14 +1633,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 1\n}"
+              "raw": "{\n  \"EmployeeId\": 12,\n  \"CompanyStateId\": 4,\n  \"SdiCompanyStateId\": 4,\n  \"SuiCompanyStateId\": 4,\n  \"TaxExemptions\": 1,\n  \"ToState\": null,\n  \"ReciprocalAmountPercentage\": null,\n  \"MinimumWage\": null,\n  \"EmployeeStateMaritalStatusId\": 51,\n  \"TaxCode\": null,\n  \"SalaryType\": \"NA\",\n  \"ReciprocalMethod\": \"TakeNone\",\n  \"County\": null,\n  \"CalculateSuiTaxableWagesFor1099\": \"N\",\n  \"TaxType\": \"None\",\n  \"TaxValue\": null,\n  \"EeStateTaxStatus\": \"Include\",\n  \"EeTaxStatusSdiExempt\": \"Include\",\n  \"EeTaxStatusSuiExempt\": \"Include\",\n  \"ErTaxStatusSdiExempt\": \"Include\",\n  \"ErTaxStatusSuiExempt\": \"Include\",\n  \"Id\": 10\n}"
             },
             "description": "Retrieves all local taxes for a specified company."
           },
           "response": []
         },
         {
-          "_postman_id": "d2327c24-ee76-08b0-d0af-09e5a253a35a",
+          "_postman_id": "6c0ebc2b-9298-ecff-f7cf-4403fec0aeb5",
           "name": "Delete EE Local Tax",
           "event": [
             {
@@ -1655,7 +1655,7 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals/{{eeLocalTaxId}}",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates/{{eeStateTaxId}}",
             "method": "DELETE",
             "header": [
               {
