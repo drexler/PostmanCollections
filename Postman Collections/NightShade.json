@@ -865,32 +865,6 @@
         "description": "Get list of companies"
       },
       "response": []
-    },
-    {
-      "_postman_id": "78509e8d-41aa-aae8-57a3-7188040bb2bc",
-      "name": "Team(Debugger)",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"id\": 203,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
-        },
-        "description": "Get list of companies"
-      },
-      "response": []
     }
   ]
 }
