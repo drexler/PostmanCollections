@@ -1152,7 +1152,7 @@
         },
         {
           "_postman_id": "9fa6fd6e-ea39-f6f5-b406-d26839830b1e",
-          "name": "SUI Taxes",
+          "name": "Create SUI Tax",
           "event": [
             {
               "listen": "test",
