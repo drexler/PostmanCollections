@@ -465,6 +465,32 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "9da846f5-b47b-18e7-e1af-10b8628048be",
+          "name": "Division (Minimum) copy",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"East Boat Division\",\n  \"name\": \"East Boat Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
         }
       ]
     },
@@ -504,7 +530,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"DeptofMysteries \",\n  \"name\": \"DeptofMysteries\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"DeptoWithNoTeams \",\n  \"name\": \"DeptofMysteries232\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
             },
             "description": "Create a new department"
           },
@@ -647,224 +673,231 @@
     },
     {
       "_postman_id": "7e3f14d9-679f-29d8-706a-f92d3003d911",
-      "name": "Team",
-      "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "c5f77218-1b9f-db51-a141-693310d56ad3",
-      "name": "Team",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "var responseData = JSON.parse(responseBody);",
-              "",
-              "postman.setEnvironmentVariable(\"teamId\", responseData[\"id\"]);",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestT453\",\n      \"name\": \"Test334\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
-        },
-        "description": "Create a new company"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "2dc3eaf8-6371-fe2e-8233-aca52ce64c27",
-      "name": "Team",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"id\": 178,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
-        },
-        "description": "Get list of companies"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "caeeb72e-4b1e-65e0-3e72-1e104fb6d7c0",
-      "name": "Team",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": "Get list of companies"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "aefcb806-99d9-0465-096e-c21ad6933680",
       "name": "Teams",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": "Get list of companies"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "dc1a5f67-cd78-1dc8-d664-1b776106bd0d",
-      "name": "Team",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": ""
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "e3d1a1f4-4c47-a342-e132-23388356f6a9",
-      "name": "Team (invalid auth)",
-      "event": [
+      "description": "",
+      "item": [
         {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 401\"] = responseCode.code === 401;",
-              "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Bearer kslsls",
+          "_postman_id": "c5f77218-1b9f-db51-a141-693310d56ad3",
+          "name": "Team",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var responseData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"teamId\", responseData[\"id\"]);",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestT453\",\n      \"name\": \"Test334\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2dc3eaf8-6371-fe2e-8233-aca52ce64c27",
+          "name": "Team",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 178,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "caeeb72e-4b1e-65e0-3e72-1e104fb6d7c0",
+          "name": "Team",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "aefcb806-99d9-0465-096e-c21ad6933680",
+          "name": "Teams",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "dc1a5f67-cd78-1dc8-d664-1b776106bd0d",
+          "name": "Team",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
             "description": ""
           },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestTeamstersIdo\",\n      \"name\": \"TestTeamstersIdo\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+          "response": []
         },
-        "description": "Create a new company"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "4e592251-6b3e-3303-f83f-bdab06ed20fd",
-      "name": "Team (Missing  field)",
-      "event": [
         {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 400\"] = responseCode.code === 400;",
-              "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
+          "_postman_id": "e3d1a1f4-4c47-a342-e132-23388356f6a9",
+          "name": "Team (invalid auth)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 401\"] = responseCode.code === 401;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer kslsls",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      \"id\": 0,\n      \"departmentId\": 15,\n      \"shortName\": \"TestTeamstersIdo\",\n      \"name\": \"TestTeamstersIdo\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+            },
+            "description": "Create a new company"
           },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n      \"id\": 186,\n      \"departmentId\": 15,\n      \"shortName\": \"TeDifferent\",\n      \"name\": \"TestTeDiff\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+          "response": []
         },
-        "description": "Create a new company"
-      },
-      "response": []
+        {
+          "_postman_id": "4e592251-6b3e-3303-f83f-bdab06ed20fd",
+          "name": "Team (Missing  field)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 400\"] = responseCode.code === 400;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      \"id\": 186,\n      \"departmentId\": 15,\n      \"shortName\": \"TeDifferent\",\n      \"name\": \"TestTeDiff\",\n      \"isAddressUsedOnCheck\": false,\n      \"isAvailableForEmployeeAssignment\": true,\n      \"defaultHomeStateId\": 2,\n      \"defaultPayRate\": null,\n      \"defaultEmployeeRateId\": null,\n      \"bankAccounts\": []\n    }"
+            },
+            "description": "Create a new company"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1fe12dff-c4af-1f6b-6d50-8dd2b560ee2b",
+          "name": "Teams (Invalid uri)",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/672/teams",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
+        }
+      ]
     },
     {
-      "_postman_id": "1fe12dff-c4af-1f6b-6d50-8dd2b560ee2b",
-      "name": "Teams (Invalid uri)",
-      "request": {
-        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/672/teams",
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{Authorization}}",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": "Get list of companies"
-      },
-      "response": []
+      "_postman_id": "2d468d06-c764-0f93-46b4-22064242bdbf",
+      "name": "Employee",
+      "description": "Provides access to information regarding the employment of a person by a company.",
+      "item": []
     }
   ]
 }
