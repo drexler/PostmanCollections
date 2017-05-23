@@ -690,88 +690,88 @@
             "description": "Create a new company"
           },
           "response": []
-        },
-        {
-          "_postman_id": "2dc3eaf8-6371-fe2e-8233-aca52ce64c27",
-          "name": "Team",
-          "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Authorization}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": 178,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
-            },
-            "description": "Get list of companies"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "caeeb72e-4b1e-65e0-3e72-1e104fb6d7c0",
-          "name": "Team",
-          "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Authorization}}",
-                "description": ""
-              }
-            ],
-            "body": {},
-            "description": "Get list of companies"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "aefcb806-99d9-0465-096e-c21ad6933680",
-          "name": "Teams",
-          "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Authorization}}",
-                "description": ""
-              }
-            ],
-            "body": {},
-            "description": "Get list of companies"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "dc1a5f67-cd78-1dc8-d664-1b776106bd0d",
-          "name": "Team",
-          "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Authorization}}",
-                "description": ""
-              }
-            ],
-            "body": {},
-            "description": ""
-          },
-          "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "2dc3eaf8-6371-fe2e-8233-aca52ce64c27",
+      "name": "Team",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 178,\n  \"departmentId\": 15,\n  \"shortName\": \"TestTeamsters\",\n  \"name\": \"TestTeamsters\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+        },
+        "description": "Get list of companies"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "caeeb72e-4b1e-65e0-3e72-1e104fb6d7c0",
+      "name": "Team",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get list of companies"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "aefcb806-99d9-0465-096e-c21ad6933680",
+      "name": "Teams",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get list of companies"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "dc1a5f67-cd78-1dc8-d664-1b776106bd0d",
+      "name": "Team",
+      "request": {
+        "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions/{{divisionId}}/branches/{{branchId}}/departments/{{deptId}}/teams/{{teamId}}",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{Authorization}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
     },
     {
       "_postman_id": "e3d1a1f4-4c47-a342-e132-23388356f6a9",
