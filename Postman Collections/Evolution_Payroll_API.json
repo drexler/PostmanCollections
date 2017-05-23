@@ -1086,7 +1086,7 @@
       "item": [
         {
           "_postman_id": "7e685ec0-728b-0061-faf6-02a7af8422be",
-          "name": "SUI Taxes",
+          "name": "Get SUI Taxes",
           "event": [
             {
               "listen": "test",
