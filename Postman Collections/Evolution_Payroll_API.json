@@ -726,6 +726,32 @@
             "description": "Creates an employee"
           },
           "response": []
+        },
+        {
+          "_postman_id": "ee465f3b-5bf4-fb7d-ec50-3a6758168a15",
+          "name": "Employees copy",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Person\": {\n    \"Name\": {\n      \"LastName\": \"Von Powderpuff\",\n      \"FirstName\": \"Helgas\"\n    },\n    \"Address\": {\n      \"ZipCode\": \"05401\",\n      \"State\": \"VT\",\n      \"City\": \"Burlington\",\n      \"Street1\": \"73 Main Street #201\"\n    },\n    \"SocialSecurityNumber\": \"684-34-1641\",\n    \"ResidentialStateId\": 1\n  },\n  \"CompanyId\": 8\n}"
+            },
+            "description": "Creates an employee"
+          },
+          "response": []
         }
       ]
     },
