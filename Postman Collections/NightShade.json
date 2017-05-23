@@ -874,7 +874,7 @@
       "item": [
         {
           "_postman_id": "9da846f5-b47b-18e7-e1af-10b8628048be",
-          "name": "Division (Minimum) copy",
+          "name": "Employee (Minimum)",
           "request": {
             "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
             "method": "POST",
