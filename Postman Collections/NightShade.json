@@ -504,7 +504,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"DeptofMysteries \",\n  \"name\": \"DeptofMysteries\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
+              "raw": "{\n  \"id\": 0,\n  \"branchId\": 10,\n  \"shortName\": \"DeptoWithNoTeams \",\n  \"name\": \"DeptofMysteries232\",\n  \"isAddressUsedOnCheck\": false,\n  \"isAvailableForEmployeeAssignment\": true,\n  \"defaultHomeStateId\": 2,\n  \"homeStateType\": \"employee\",\n  \"defaultPayRate\": null,\n  \"defaultEmployeeRateId\": null,\n  \"bankAccounts\": []\n}"
             },
             "description": "Create a new department"
           },
@@ -647,7 +647,7 @@
     },
     {
       "_postman_id": "7e3f14d9-679f-29d8-706a-f92d3003d911",
-      "name": "Team",
+      "name": "Teams",
       "description": "",
       "item": [
         {
@@ -866,6 +866,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "2d468d06-c764-0f93-46b4-22064242bdbf",
+      "name": "Employee",
+      "description": "Provides access to information regarding the employment of a person by a company.",
+      "item": []
     }
   ]
 }
