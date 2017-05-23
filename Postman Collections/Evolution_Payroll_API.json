@@ -729,7 +729,7 @@
         },
         {
           "_postman_id": "ee465f3b-5bf4-fb7d-ec50-3a6758168a15",
-          "name": "Employees copy",
+          "name": "Employees(Max)",
           "request": {
             "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
             "method": "POST",
