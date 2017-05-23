@@ -1119,7 +1119,7 @@
         },
         {
           "_postman_id": "4dba83dd-7d2b-0e97-f97c-84e7e5e8fd27",
-          "name": "SUI Tax",
+          "name": "Get SUI Tax",
           "event": [
             {
               "listen": "test",
