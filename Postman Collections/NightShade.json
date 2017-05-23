@@ -465,32 +465,6 @@
             "description": ""
           },
           "response": []
-        },
-        {
-          "_postman_id": "9da846f5-b47b-18e7-e1af-10b8628048be",
-          "name": "Division (Minimum) copy",
-          "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Authorization}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"East Boat Division\",\n  \"name\": \"East Boat Division\",\n  \"defaultHomeStateId\": 2\n}"
-            },
-            "description": "Get list of companies"
-          },
-          "response": []
         }
       ]
     },
@@ -897,7 +871,34 @@
       "_postman_id": "2d468d06-c764-0f93-46b4-22064242bdbf",
       "name": "Employee",
       "description": "Provides access to information regarding the employment of a person by a company.",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "9da846f5-b47b-18e7-e1af-10b8628048be",
+          "name": "Division (Minimum) copy",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/divisions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 0,\n  \"companyId\": 8,\n  \"shortName\": \"East Boat Division\",\n  \"name\": \"East Boat Division\",\n  \"defaultHomeStateId\": 2\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
