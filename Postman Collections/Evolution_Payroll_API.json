@@ -1226,7 +1226,7 @@
         },
         {
           "_postman_id": "848fbe3f-882e-0fc3-24e9-2ee1c4ee7811",
-          "name": "SUI Tax",
+          "name": "Update SUI Tax",
           "event": [
             {
               "listen": "test",
