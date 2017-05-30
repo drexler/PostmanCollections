@@ -947,6 +947,44 @@
             "description": "Get list of companies"
           },
           "response": []
+        },
+        {
+          "_postman_id": "bdcf1917-c7fe-a0a0-f97d-ebf8d6142576",
+          "name": "Employee (with education) copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n    \"id\": 3,\r\n    \"education\": [\r\n      {\r\n        \"school\": {\r\n          \"id\": 1,\r\n          \"name\": \"University Of Vermont\",\r\n          \"address\": null\r\n        },\r\n        \"startDate\": \"2013-05-17T00:00:00\",\r\n        \"endDate\": \"2013-05-17T00:00:00\",\r\n        \"graduationDate\": \"2013-05-17T00:00:00\",\r\n        \"degree\": \"bachelors\",\r\n        \"gpa\": \"4.0\",\r\n        \"major\": \"basket weaving\",\r\n        \"notes\": \"very good\"\r\n      }\r\n    ],\r\n    \"firstName\": \"Doug\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"identifier\": {\r\n      \"designation\": \"Ssn\",\r\n      \"value\": \"013-85-5200\"\r\n    },\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
         }
       ]
     }
