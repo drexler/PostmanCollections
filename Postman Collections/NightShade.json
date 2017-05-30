@@ -912,7 +912,7 @@
         },
         {
           "_postman_id": "af33d3b9-9d47-f7f4-cffe-376887671f5d",
-          "name": "Employee (with education)",
+          "name": "Employee (Minimum) copy",
           "event": [
             {
               "listen": "test",
