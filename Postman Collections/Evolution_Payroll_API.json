@@ -764,6 +764,44 @@
             "description": "Creates an employee"
           },
           "response": []
+        },
+        {
+          "_postman_id": "284eacc6-84ec-8eba-690e-bf3c8c72aa1f",
+          "name": "Employees copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Person\": {\n    \"Name\": {\n      \"LastName\": \"Von Powderpuff\",\n      \"FirstName\": \"Helgas\"\n    },\n    \"Address\": {\n      \"ZipCode\": \"05401\",\n      \"State\": \"VT\",\n      \"City\": \"Burlington\",\n      \"Street1\": \"73 Main Street #201\"\n    },\n    \"SocialSecurityNumber\": \"684-34-1641\",\n    \"ResidentialStateId\": 1\n  },\n  \"CompanyId\": 8\n}"
+            },
+            "description": "Creates an employee"
+          },
+          "response": []
         }
       ]
     },
