@@ -912,7 +912,7 @@
         },
         {
           "_postman_id": "af33d3b9-9d47-f7f4-cffe-376887671f5d",
-          "name": "Employee (Minimum) copy",
+          "name": "Employee (with education)",
           "event": [
             {
               "listen": "test",
@@ -942,7 +942,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n    \"firstName\": \"Doug\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"ssn\": \"013-85-5200\",\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
+              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n  \t\"id\": 0,\r\n  \t\"education\": [\r\n  \t\t{\r\n  \t\t\t\"school\": null,\r\n  \t\t\t\"startDate\": \"2013-05-17T00:00:00\",\r\n  \t\t\t\"endDate\": \"2013-05-17T00:00:00\",\r\n  \t\t\t\"graduationDate\": \"2013-05-17T00:00:00\",\r\n  \t\t\t\"degree\": \"bachelors\",\r\n  \t\t\t\"gpa\": \"4.0\",\r\n  \t\t\t\"major\": \"basket weaving\",\r\n  \t\t\t\"notes\": \"very good\"\r\n  \t\t},\r\n  \t\t{\r\n  \t\t\t\"school\": null,\r\n  \t\t\t\"startDate\": \"2013-05-18T00:00:00\",\r\n  \t\t\t\"endDate\": \"2013-05-18T00:00:00\",\r\n  \t\t\t\"graduationDate\": \"2013-05-18T00:00:00\",\r\n  \t\t\t\"degree\": \"associates\",\r\n  \t\t\t\"gpa\": \"3.0\",\r\n  \t\t\t\"major\": \"terraform\",\r\n  \t\t\t\"notes\": \"good enough\"\r\n  \t\t}\r\n  \t  ]\r\n    \"firstName\": \"Doug\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"ssn\": \"013-85-5200\",\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
             },
             "description": "Get list of companies"
           },
