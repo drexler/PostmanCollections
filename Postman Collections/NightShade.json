@@ -904,7 +904,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n  \t\"id\": 0,\r\n    \"firstName\": \"Doug\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"ssn\": \"013-85-5200\",\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
+              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n  \t\"id\": 0,\r\n    \"firstName\": \"Doug\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"identifier\": {\r\n      \"designation\": \"Ssn\",\r\n      \"value\": \"013-85-5200\"\r\n    },\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
             },
             "description": "Get list of companies"
           },
