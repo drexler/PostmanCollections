@@ -1040,7 +1040,7 @@
             }
           ],
           "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/9999",
             "method": "GET",
             "header": [
               {
