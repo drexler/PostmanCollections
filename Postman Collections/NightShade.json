@@ -1033,7 +1033,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Status code is 201\"] = responseCode.code === 404;",
                   "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
                 ]
               }
