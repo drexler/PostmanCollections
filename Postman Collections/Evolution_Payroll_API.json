@@ -802,6 +802,24 @@
             "description": "Creates an employee"
           },
           "response": []
+        },
+        {
+          "_postman_id": "47cfa5e4-bc6f-b0ce-d7ca-231d401adcb6",
+          "name": "Employee copy",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get a specific company"
+          },
+          "response": []
         }
       ]
     },
