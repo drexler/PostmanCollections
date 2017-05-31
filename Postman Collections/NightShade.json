@@ -1023,6 +1023,44 @@
             "description": "Get list of companies"
           },
           "response": []
+        },
+        {
+          "_postman_id": "a4b2d2f8-e2a7-0076-82c2-dcfa0980007e",
+          "name": "Employee copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"companyId\": 8,\r\n  \"person\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Underhill\",\r\n    \"address\": {\r\n      \"addressLine1\": \"123 Main Street\",\r\n      \"city\": \"Burington\",\r\n      \"state\": \"VT\",\r\n      \"postalCode\": \"05401\"\r\n    },\r\n    \"identificationNumber\": {\r\n      \"type\": \"Ssn\",\r\n      \"value\": \"023-23-2424\"\r\n    },\r\n    \"residentialStateId\": 1\r\n  }\r\n}"
+            },
+            "description": "Get list of companies"
+          },
+          "response": []
         }
       ]
     }
