@@ -1812,17 +1812,20 @@
             {
               "key": "grant_type",
               "value": "password",
-              "type": "text"
+              "type": "text",
+              "enabled": true
             },
             {
               "key": "username",
               "value": "sally2",
-              "type": "text"
+              "type": "text",
+              "enabled": true
             },
             {
               "key": "password",
               "value": "test2",
-              "type": "text"
+              "type": "text",
+              "enabled": true
             }
           ]
         },
