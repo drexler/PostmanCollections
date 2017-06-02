@@ -1665,7 +1665,7 @@
         },
         {
           "_postman_id": "ed3b8487-7e30-c3a5-726e-4853e7c81b4b",
-          "name": "Create EE Local Tax (Min)",
+          "name": "Create EE Local Tax copy",
           "event": [
             {
               "listen": "test",
