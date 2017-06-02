@@ -1399,7 +1399,7 @@
         },
         {
           "_postman_id": "92a8d87a-ef9d-5697-5453-db3108a76541",
-          "name": "Create SUI Tax copy",
+          "name": "Create SUI Tax (Min)",
           "event": [
             {
               "listen": "test",
