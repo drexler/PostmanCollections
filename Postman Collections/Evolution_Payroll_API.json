@@ -1665,7 +1665,7 @@
         },
         {
           "_postman_id": "ed3b8487-7e30-c3a5-726e-4853e7c81b4b",
-          "name": "Create EE Local Tax copy",
+          "name": "Create EE Local Tax (Min)",
           "event": [
             {
               "listen": "test",
@@ -1698,7 +1698,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 0\n}"
+              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"Active\": true,\n  \"Id\": 0\n}"
             },
             "description": "Creates a local tax record for an employee"
           },
