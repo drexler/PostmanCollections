@@ -1936,7 +1936,26 @@
       "_postman_id": "5ed81924-50f9-63fc-5de7-c7d409449513",
       "name": "API Information",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "f62d4cce-9ae1-300a-0989-efa5925de874",
+          "name": "Get API Version",
+          "request": {
+            "url": "{{EVO_API_URL}}/api/information",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
