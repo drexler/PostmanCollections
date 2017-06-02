@@ -1173,7 +1173,7 @@
         },
         {
           "_postman_id": "72885bfa-2d83-5883-28ef-1de2e02f9653",
-          "name": "Create CoLocal Tax copy",
+          "name": "Create CoLocal Tax (Minimum)",
           "event": [
             {
               "listen": "test",
@@ -1206,7 +1206,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyId\": 8,\n  \"TaxRate\": null,\n  \"StateId\": 38,\n  \"LocalTaxId\": 14,\n  \"LocalEinNumber\": \"123456789\",\n  \"PaymentMethod\": \"Check\",\n  \"EFTStatus\": \"None\",\n  \"LocalDepositFrequencyId\": 4876,\n  \"FinalTaxReturn\": false,\n  \"LastTaxReturn\": false,\n  \"Exempt\": false,\n  \"AppliedFor\": false,\n  \"AutocreateOnNewHire\": false,\n  \"SelfAdjustTax\": false,\n  \"Deduct\": true,\n  \"IsActive\": true,\n  \"Id\": 0\n}"
+              "raw": "{\n  \"CompanyId\": 8,\n  \"StateId\": 40,\n  \"LocalTaxId\": 2716,\n  \"LocalEinNumber\": \"123456789\",\n  \"PaymentMethod\": \"Check\",\n  \"LocalDepositFrequencyId\": 4876,\n  \"FinalTaxReturn\": false,\n  \"Exempt\": false,\n  \"AutocreateOnNewHire\": false,\n  \"SelfAdjustTax\": false,\n  \"Deduct\": true,\n  \"IsActive\": true,\n  \"Id\": 0\n}"
             },
             "description": "Creates a local tax for a company"
           },
