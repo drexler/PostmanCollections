@@ -1924,7 +1924,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"EmployeeId\": 12,\n  \"CompanyStateId\": 4,\n  \"SdiCompanyStateId\": 4,\n  \"SuiCompanyStateId\": 4,\n  \"TaxExemptions\": 1,\n  \"ToState\": null,\n  \"ReciprocalAmountPercentage\": null,\n  \"MinimumWage\": null,\n  \"EmployeeStateMaritalStatusId\": 51,\n  \"TaxCode\": null,\n  \"SalaryType\": \"NA\",\n  \"ReciprocalMethod\": \"TakeNone\",\n  \"County\": null,\n  \"CalculateSuiTaxableWagesFor1099\": \"N\",\n  \"TaxType\": \"None\",\n  \"TaxValue\": null,\n  \"EeStateTaxStatus\": \"Include\",\n  \"EeTaxStatusSdiExempt\": \"Include\",\n  \"EeTaxStatusSuiExempt\": \"Include\",\n  \"ErTaxStatusSdiExempt\": \"Include\",\n  \"ErTaxStatusSuiExempt\": \"Include\",\n  \"Id\": 0\n}"
+              "raw": "{\n  \"EmployeeId\": 12,\n  \"CompanyStateId\": 4,\n  \"SdiCompanyStateId\": 4,\n  \"SuiCompanyStateId\": 4,\n  \"EmployeeStateMaritalStatusId\": 51,\n  \"TaxCode\": null,\n  \"ReciprocalMethod\": \"TakeNone\",\n  \"CalculateSuiTaxableWagesFor1099\": \"N\",\n  \"TaxType\": \"None\",\n  \"TaxValue\": null,\n  \"Id\": 0\n}"
             },
             "description": "Creates a state tax record for an employee"
           },
