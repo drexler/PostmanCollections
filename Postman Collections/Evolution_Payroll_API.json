@@ -1432,7 +1432,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"Oregon-SUI\",\n  \"StateId\": 40,\n  \"SySuiId\": 34,\n  \"Id\": 0\n}"
+              "raw": "{\n\t\"CompanyId\": 8,\n    \"SuiRate\": 0,\n    \"Description\": \"Oregon-SUITest\",\n    \"StateId\": 40,\n    \"SySuiId\": 34,\n    \"AlternateWage\": false,\n    \"PaymentMethod\": \"Check\",\n    \"FinalTaxReturn\": false,\n    \"AppliedFor\": false,\n    \"LastTaxReturn\": false,\n    \"IsActive\": true,\n    \"SuiReimburser\": false,\n    \"TaxReturnCode\": null,\n    \"GlTag\": null,\n    \"GlOffsetTag\": null,\n    \"RateLastReviewedDate\": null,\n    \"Id\": 2\n}"
             },
             "description": "Creates a local tax for a company"
           },
