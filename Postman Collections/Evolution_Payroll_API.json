@@ -1662,6 +1662,47 @@
             "description": "Retrieves all local taxes for a specified company."
           },
           "response": []
+        },
+        {
+          "_postman_id": "ed3b8487-7e30-c3a5-726e-4853e7c81b4b",
+          "name": "Create EE Local Tax (Min)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"eeLo\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeelocals",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyLocalId\": 1,\n  \"EmployeeId\": 12,\n  \"CompanyLocationId\": null,\n  \"County\": \"Hamilton County\",\n  \"WorkAddress1\": null,\n  \"WorkAddress2\": null,\n  \"WorkState\": null,\n  \"WorkCity\": null,\n  \"WorkZip\": null,\n  \"LocalTaxValue\": null,\n  \"MiscAmount\": null,\n  \"PercentTaxWages\": null,\n  \"TaxCode\": null,\n  \"ExcemptExclude\": \"Include\",\n  \"Deduct\": \"Always\",\n  \"LocalTaxType\": \"None\",\n  \"WorkOverride\": false,\n  \"IncludePretax\": true,\n  \"Active\": true,\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a local tax record for an employee"
+          },
+          "response": []
         }
       ]
     },
