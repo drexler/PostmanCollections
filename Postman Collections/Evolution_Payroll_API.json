@@ -1888,6 +1888,47 @@
             "description": "Retrieves all local taxes for a specified company."
           },
           "response": []
+        },
+        {
+          "_postman_id": "50a601fd-dbdb-48b1-8e5d-d0e9f173b20c",
+          "name": "Create EE State Tax copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"eeS\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}/employeestates",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"EmployeeId\": 12,\n  \"CompanyStateId\": 4,\n  \"SdiCompanyStateId\": 4,\n  \"SuiCompanyStateId\": 4,\n  \"TaxExemptions\": 1,\n  \"ToState\": null,\n  \"ReciprocalAmountPercentage\": null,\n  \"MinimumWage\": null,\n  \"EmployeeStateMaritalStatusId\": 51,\n  \"TaxCode\": null,\n  \"SalaryType\": \"NA\",\n  \"ReciprocalMethod\": \"TakeNone\",\n  \"County\": null,\n  \"CalculateSuiTaxableWagesFor1099\": \"N\",\n  \"TaxType\": \"None\",\n  \"TaxValue\": null,\n  \"EeStateTaxStatus\": \"Include\",\n  \"EeTaxStatusSdiExempt\": \"Include\",\n  \"EeTaxStatusSuiExempt\": \"Include\",\n  \"ErTaxStatusSdiExempt\": \"Include\",\n  \"ErTaxStatusSuiExempt\": \"Include\",\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a state tax record for an employee"
+          },
+          "response": []
         }
       ]
     },
