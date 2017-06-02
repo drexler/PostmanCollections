@@ -1106,7 +1106,26 @@
       "_postman_id": "4b62bb37-4bf8-6e48-c3a6-f0c6a928c349",
       "name": "Constants",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "75d87f89-d15d-089f-19bf-bb40115992ed",
+          "name": "Get Constants",
+          "request": {
+            "url": "{{FACADE_API_URL}}/bureaus/{{bureau}}/constants",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "a6a25d71-ce7e-4fb3-8f5d-dd29139cc39e",
