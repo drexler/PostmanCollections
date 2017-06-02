@@ -1064,7 +1064,7 @@
         },
         {
           "_postman_id": "a6b6267d-54b2-5ad6-6c70-314b0335000f",
-          "name": "Employee copy",
+          "name": "Employee",
           "event": [
             {
               "listen": "test",
