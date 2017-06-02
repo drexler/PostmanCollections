@@ -1396,6 +1396,47 @@
             "description": "Updates a specific sui tax"
           },
           "response": []
+        },
+        {
+          "_postman_id": "92a8d87a-ef9d-5697-5453-db3108a76541",
+          "name": "Create SUI Tax copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");",
+                  "",
+                  "var responseData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TaxId\", responseData[\"Id\"]);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/sui",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CompanyId\": 8,\n  \"SuiRate\": 0.01,\n  \"Description\": \"VT-SUINew\",\n  \"StateId\": 2,\n  \"SySuiId\": 45,\n  \"Id\": 0\n}"
+            },
+            "description": "Creates a local tax for a company"
+          },
+          "response": []
         }
       ]
     },
