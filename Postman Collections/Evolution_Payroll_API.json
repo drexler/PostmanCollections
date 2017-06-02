@@ -1933,6 +1933,12 @@
       ]
     },
     {
+      "_postman_id": "5ed81924-50f9-63fc-5de7-c7d409449513",
+      "name": "API Information",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "e10b1886-4194-92ee-01f1-420758a2f5ab",
       "name": "API Access Token",
       "event": [
