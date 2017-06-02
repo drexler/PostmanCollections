@@ -1173,7 +1173,7 @@
         },
         {
           "_postman_id": "72885bfa-2d83-5883-28ef-1de2e02f9653",
-          "name": "Create CoLocal Tax (Minimum)",
+          "name": "Create CoLocal Tax copy",
           "event": [
             {
               "listen": "test",
