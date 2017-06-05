@@ -1129,7 +1129,7 @@
           "_postman_id": "c7f7546e-147c-0f46-57ae-4db79b7bb855",
           "name": "Get Dictionaries (with param)",
           "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/constants?type=eeo",
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=eeo",
             "method": "GET",
             "header": [
               {
