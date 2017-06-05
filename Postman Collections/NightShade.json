@@ -1109,7 +1109,7 @@
       "item": [
         {
           "_postman_id": "75d87f89-d15d-089f-19bf-bb40115992ed",
-          "name": "Get Constants",
+          "name": "Get Dictionaries",
           "request": {
             "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries",
             "method": "GET",
