@@ -1142,6 +1142,24 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "faf8f28d-83f4-34c5-0d8a-bcbf0a39a465",
+          "name": "Get Dictionaries copy",
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
