@@ -1129,7 +1129,28 @@
           "_postman_id": "c7f7546e-147c-0f46-57ae-4db79b7bb855",
           "name": "Get Dictionaries (with param)",
           "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=eeo",
+            "url": {
+              "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=eeo",
+              "auth": {},
+              "host": [
+                "{{FACADE_API_URL}}"
+              ],
+              "path": [
+                "api",
+                "bureaus",
+                "{{bureau}}",
+                "dictionaries"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "eeo",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -1153,6 +1174,45 @@
               {
                 "key": "Authorization",
                 "value": "",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3c5e061a-dec6-5ce9-8b8e-8dc6d533baf6",
+          "name": "Get Dictionaries (with param) copy",
+          "request": {
+            "url": {
+              "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=eeo",
+              "auth": {},
+              "host": [
+                "{{FACADE_API_URL}}"
+              ],
+              "path": [
+                "api",
+                "bureaus",
+                "{{bureau}}",
+                "dictionaries"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "eeo",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
                 "description": ""
               }
             ],
