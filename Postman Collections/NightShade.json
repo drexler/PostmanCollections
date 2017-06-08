@@ -317,7 +317,7 @@
             }
           ],
           "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/companies",
             "method": "GET",
             "header": [
               {
