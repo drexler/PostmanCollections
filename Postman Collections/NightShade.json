@@ -1223,7 +1223,7 @@
         },
         {
           "_postman_id": "731f8944-1c7a-66a6-f876-8442094eb5ca",
-          "name": "Get Dictionaries (with Invalid param) copy",
+          "name": "Get Dictionaries (with Invalid  query)",
           "request": {
             "url": {
               "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=invalidparam",
