@@ -1220,6 +1220,45 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "731f8944-1c7a-66a6-f876-8442094eb5ca",
+          "name": "Get Dictionaries (with Invalid param) copy",
+          "request": {
+            "url": {
+              "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=invalidparam",
+              "auth": {},
+              "host": [
+                "{{FACADE_API_URL}}"
+              ],
+              "path": [
+                "api",
+                "bureaus",
+                "{{bureau}}",
+                "dictionaries"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "invalidparam",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
