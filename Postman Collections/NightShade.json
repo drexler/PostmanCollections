@@ -300,6 +300,36 @@
             "description": "Get list of companies"
           },
           "response": []
+        },
+        {
+          "_postman_id": "994b645c-b645-0db2-5f77-8492e51bf5d3",
+          "name": "Companies copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\").has(\"json\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get list of companies"
+          },
+          "response": []
         }
       ]
     },
