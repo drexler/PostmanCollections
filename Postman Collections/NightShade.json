@@ -1226,7 +1226,7 @@
           "name": "Get Dictionaries (with Invalid  query)",
           "request": {
             "url": {
-              "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=invalidparam",
+              "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?invalidParam=eeo",
               "auth": {},
               "host": [
                 "{{FACADE_API_URL}}"
@@ -1239,8 +1239,8 @@
               ],
               "query": [
                 {
-                  "key": "name",
-                  "value": "invalidparam",
+                  "key": "invalidParam",
+                  "value": "eeo",
                   "equals": true,
                   "description": ""
                 }
