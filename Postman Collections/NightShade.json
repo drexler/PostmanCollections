@@ -1184,7 +1184,7 @@
         },
         {
           "_postman_id": "3c5e061a-dec6-5ce9-8b8e-8dc6d533baf6",
-          "name": "Get Dictionaries (with param) copy",
+          "name": "Get Dictionaries (with Invalid param)",
           "request": {
             "url": {
               "raw": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/dictionaries?name=eeo",
