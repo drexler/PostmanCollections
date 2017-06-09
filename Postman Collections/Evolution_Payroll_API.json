@@ -837,8 +837,8 @@
             }
           ],
           "request": {
-            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
-            "method": "POST",
+            "url": "{{EVO_API_URL}}/api/bureau/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
