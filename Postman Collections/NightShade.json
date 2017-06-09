@@ -1132,7 +1132,7 @@
         },
         {
           "_postman_id": "5d6fa2de-7116-3c0d-a2a3-a3cb0fd1dbe5",
-          "name": "Employee (Minimum) copy",
+          "name": "Employee",
           "event": [
             {
               "listen": "test",
