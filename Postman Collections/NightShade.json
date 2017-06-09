@@ -1146,8 +1146,8 @@
             }
           ],
           "request": {
-            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees",
-            "method": "POST",
+            "url": "{{FACADE_API_URL}}/api/bureaus/{{bureau}}/clients/{{clientId}}/companies/{{companyId}}/employees/{{employeeId}}",
+            "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
